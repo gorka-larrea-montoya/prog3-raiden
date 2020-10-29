@@ -1,7 +1,9 @@
 import java.awt.*;
 import javax.swing.*;
-@SuppressWarnings("serial")
+
 public class Ventana extends JFrame{
+ 
+	private static final long serialVersionUID = 6147411015530214406L;
 	JLabel textoEjemplo;
 	
 	public Ventana(int alto, int ancho,String titulo,Game_Main game) {
