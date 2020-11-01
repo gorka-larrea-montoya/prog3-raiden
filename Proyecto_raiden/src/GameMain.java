@@ -18,8 +18,10 @@ public class GameMain extends Canvas implements Runnable{
 		start();
 		
 		handler = new GameHandler();
-		handler.addObject(new Box(100,100,0,1));
-		handler.addObject(new Box(200,200,1,0));
+		handler.addObject(new Box(100,500,0,-1,ID.Block));
+		handler.addObject(new Box(200,200,1,0,ID.Block));
+		this.addKeyListener(new Inputs(handler));
+		handler.addObject(new PlayerObject(300, 300, ID.Player, handler));
 	}	
 	public static void main(String[] args) {
 		new GameMain();	
@@ -36,7 +38,7 @@ public class GameMain extends Canvas implements Runnable{
 			e.printStackTrace();
 		}
 	}//un gameloop robado de internet calcula el juego tropecientas veces por segundo y pinta 60 veces por segundo
-	//NO TOCAR POR AHORA
+	
 	public void run() { 
 		this.requestFocus();
 		long lastTime = System.nanoTime();
@@ -69,13 +71,13 @@ public class GameMain extends Canvas implements Runnable{
 	public void tick(){ 
 		if (colortest == null) {
 			colortest = Color.red;
-		}
+		}/*
 		int redTest = colortest.getRed() -1;
 		int blueTest = colortest.getBlue() +1;
 		int greenTest = colortest.getGreen() +1;
 		colortest = new Color(redTest,blueTest,greenTest);
 		//esto es una domstracion de que la pantalla pinta y cambia de color
-		
+		*/
 		handler.tick();
 		
 	}//aqui se pinta la pantalla
