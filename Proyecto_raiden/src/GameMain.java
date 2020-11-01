@@ -4,20 +4,25 @@ import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
 
-public class Game_Main extends Canvas implements Runnable{
+public class GameMain extends Canvas implements Runnable{
 
 	private static final long serialVersionUID = 517368560782680288L;
 	private boolean isRunning = false;
 	private Thread gameThread;
 	private Color colortest;
+	private GameHandler handler;
 
 	
-	public Game_Main(){
+	public GameMain(){
 		new Ventana(1000, 600, "JuegoEjemplo", this);
 		start();
+		
+		handler = new GameHandler();
+		handler.addObject(new Box(100,100,0,1));
+		handler.addObject(new Box(200,200,1,0));
 	}	
 	public static void main(String[] args) {
-		new Game_Main();	
+		new GameMain();	
 	}
 	private void start(){
 		isRunning = true;
@@ -70,7 +75,8 @@ public class Game_Main extends Canvas implements Runnable{
 		int greenTest = colortest.getGreen() +1;
 		colortest = new Color(redTest,blueTest,greenTest);
 		//esto es una domstracion de que la pantalla pinta y cambia de color
-				
+		
+		handler.tick();
 		
 	}//aqui se pinta la pantalla
 	public void render() {
@@ -84,6 +90,9 @@ public class Game_Main extends Canvas implements Runnable{
 		
 		g.setColor(colortest);
 		g.fillRect(0, 0, 1000, 600);
+		
+		//CUIDADO QUE LA PARTE DE ARRIBA SE PINTA ANTES Y POR DETRAS DE LA DE ABAJO
+		handler.render(g);
 		
 		///// AQUI TERMINAMOS DE PINTAR LA PANTALLA
 		g.dispose();

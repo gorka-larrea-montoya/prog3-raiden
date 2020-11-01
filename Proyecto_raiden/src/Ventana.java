@@ -6,7 +6,7 @@ public class Ventana extends JFrame{
 	private static final long serialVersionUID = 6147411015530214406L;
 	JLabel textoEjemplo;
 	
-	public Ventana(int alto, int ancho,String titulo,Game_Main game) {
+	public Ventana(int alto, int ancho,String titulo,GameMain game) {
 		JFrame frame = new JFrame(titulo);
 		Dimension d = new Dimension(alto, ancho);
 		
