@@ -15,17 +15,13 @@ public class PlayerObject extends GameObject {
 	public void tick() {
 		x += velX;
 		y += velY;
-		
-		if (handler.isDown()) {	velY = speed;}else if (!handler.isUp()) {velY = 0;}
-		if (handler.isUp()) {velY = -speed;}else if (!handler.isDown()) {velY = 0;}
-		if (handler.isLeft()) {velX = -speed;}else if (!handler.isRight()) {velX = 0;}
-		if (handler.isRight()) {velX = speed;}else if (!handler.isLeft()) {velX = 0;}
-		
-		
-		
+		//tiene el fallo de que al pulsar direcciones opuestas lo resuelve con la que tiene la linea escrita mas tarde. Habría que reescribir mucho para arreglarlo
+		if (handler.isDown()) {	velY =+ speed;}else if (!handler.isUp()) {velY = 0;}
+		if (handler.isUp()) {velY =- speed;}else if (!handler.isDown()) {velY = 0;}
+		if (handler.isLeft()) {velX =- speed;}else if (!handler.isRight()) {velX = 0;}
+		if (handler.isRight()) {velX =+ speed;}else if (!handler.isLeft()) {velX = 0;}
 	}
-		
-
+	
 	public void render(Graphics g) {
 		g.setColor(Color.GREEN);
 		g.fillRect(x, y, 32, 48);
