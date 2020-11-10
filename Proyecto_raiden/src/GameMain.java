@@ -18,8 +18,8 @@ public class GameMain extends Canvas implements Runnable{
 		start();
 		
 		handler = new GameHandler();
-		handler.addObject(new Box(100,200,0,(float)-1,ID.Block));
-		handler.addObject(new Box(200,200,0,(float)-1,ID.Block));
+		handler.addObject(new Box(100,200,0,0,ID.Block));
+		handler.addObject(new Box(200,200,0,0,ID.Block));
 		this.addKeyListener(new Inputs(handler));
 		handler.addObject(new PlayerObject(300, 300, ID.Player, handler));
 	}	

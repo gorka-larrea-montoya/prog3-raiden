@@ -8,7 +8,7 @@ public class Inputs extends KeyAdapter {
 	}
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
-		
+				
 		for (int i = 0; i < handler.objectList.size(); i++) {
 			if (handler.objectList.get(i).getId() == ID.Player) {
 				if (key == KeyEvent.VK_W) {
@@ -23,11 +23,16 @@ public class Inputs extends KeyAdapter {
 				if (key == KeyEvent.VK_D) {
 					handler.setRight(true);
 				}
+				if (key == KeyEvent.VK_SPACE) {
+					System.out.println("space"); 
+					handler.addObject(new Bullet(handler.objectList.get(i).getX()+12, handler.objectList.get(i).getY()-16,ID.Bullet)); 
+				} //TODO buscar una manera de enchufar esto con un sistema de powerup o algo similar.
+				}
 			}
 		}
-	}
+	
 	public void keyReleased(KeyEvent e) {
-int key = e.getKeyCode();
+		int key = e.getKeyCode();
 		
 		for (int i = 0; i < handler.objectList.size(); i++) {
 			if (handler.objectList.get(i).getId() == ID.Player) {
@@ -46,4 +51,5 @@ int key = e.getKeyCode();
 			}
 		}
 	}
+	
 }
