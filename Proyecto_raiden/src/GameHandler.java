@@ -10,8 +10,14 @@ public class GameHandler {
 
 	
 	public void tick() {
+		//ESTE BLOQUE DE CODIGO BORRA LAS BALAS QUE SE SALEN DE LA PANTALLA
 		for (int i = 0; i < objectList.size(); i++) {
 			objectList.get(i).tick();
+			if (objectList.get(i).getId() == ID.Bullet) {
+				if (objectList.get(i).getY() < 0 ) {
+					objectList.remove(objectList.get(i));
+				}
+			}
 		}
 	}
 	public void render(Graphics g) {

@@ -5,6 +5,7 @@ import java.awt.Rectangle;
 public class PlayerObject extends GameObject {
 	GameHandler handler;
 	int speed;
+	Mejoras mejoraActual = Mejoras.ESTANDAR;
 	
 
 	public PlayerObject(int x, int y, ID id, GameHandler handler) {
@@ -12,6 +13,12 @@ public class PlayerObject extends GameObject {
 		this.handler = handler;
 		speed = 3;
 
+	}
+	public Mejoras getMejoraActual() {
+		return mejoraActual;
+	}
+	public void setMejoraActual(Mejoras mejoraActual) {
+		this.mejoraActual = mejoraActual;
 	}
 	public void tick() {
 		x += velX;

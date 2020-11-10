@@ -11,6 +11,7 @@ public class Inputs extends KeyAdapter {
 				
 		for (int i = 0; i < handler.objectList.size(); i++) {
 			if (handler.objectList.get(i).getId() == ID.Player) {
+				PlayerObject tempPlayer = (PlayerObject) handler.objectList.get(i); 
 				if (key == KeyEvent.VK_W) {
 					handler.setUp(true);
 				}
@@ -24,9 +25,17 @@ public class Inputs extends KeyAdapter {
 					handler.setRight(true);
 				}
 				if (key == KeyEvent.VK_SPACE) {
-					System.out.println("space"); 
-					handler.addObject(new Bullet(handler.objectList.get(i).getX()+12, handler.objectList.get(i).getY()-16,ID.Bullet)); 
-				} //TODO buscar una manera de enchufar esto con un sistema de powerup o algo similar.
+								
+					if (tempPlayer.getMejoraActual() ==  Mejoras.DOBLE) {
+						handler.addObject(new Bullet(tempPlayer.getX()+12,tempPlayer.getY()-16,ID.Bullet,handler)); 
+					} else if (tempPlayer.getMejoraActual() == Mejoras.ESTANDAR) {
+						handler.addObject(new Bullet(tempPlayer.getX()+20,tempPlayer.getY()-16,ID.Bullet,handler));
+						handler.addObject(new Bullet(tempPlayer.getX()+4, tempPlayer.getY()-16,ID.Bullet,handler));
+					} 
+					
+					}
+					
+					
 				}
 			}
 		}
