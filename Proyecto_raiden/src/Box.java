@@ -3,9 +3,10 @@ import java.awt.*;
 public class Box extends GameObject {
 
 	public Box(int x, int y,float velx,float vely,ID id) {
-		super(x,y,id);
+		super(x,y);
 		this.velX = velx;
 		this.velY = vely;
+		this.id = id.Enemy;
 
 	}
 

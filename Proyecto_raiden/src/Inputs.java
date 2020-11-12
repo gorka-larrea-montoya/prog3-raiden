@@ -27,10 +27,10 @@ public class Inputs extends KeyAdapter {
 				if (key == KeyEvent.VK_SPACE) {
 								
 					if (tempPlayer.getMejoraActual() ==  Mejoras.DOBLE) {
-						handler.addObject(new Bullet(tempPlayer.getX()+12,tempPlayer.getY()-16,ID.Bullet,handler)); 
+						handler.addObject(new Bullet(tempPlayer.getX()+12,tempPlayer.getY()-16,handler)); 
 					} else if (tempPlayer.getMejoraActual() == Mejoras.ESTANDAR) {
-						handler.addObject(new Bullet(tempPlayer.getX()+20,tempPlayer.getY()-16,ID.Bullet,handler));
-						handler.addObject(new Bullet(tempPlayer.getX()+4, tempPlayer.getY()-16,ID.Bullet,handler));
+						handler.addObject(new Bullet(tempPlayer.getX()+20,tempPlayer.getY()-16,handler));
+						handler.addObject(new Bullet(tempPlayer.getX()+4, tempPlayer.getY()-16,handler));
 					} 
 					
 					}

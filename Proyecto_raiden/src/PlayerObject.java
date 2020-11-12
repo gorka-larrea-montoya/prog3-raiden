@@ -8,10 +8,11 @@ public class PlayerObject extends GameObject {
 	Mejoras mejoraActual = Mejoras.ESTANDAR;
 	
 
-	public PlayerObject(int x, int y, ID id, GameHandler handler) {
-		super(x, y, id);
+	public PlayerObject(int x, int y, GameHandler handler) {
+		super(x, y);
 		this.handler = handler;
 		speed = 3;
+		this.id = id.Player;
 
 	}
 	public Mejoras getMejoraActual() {

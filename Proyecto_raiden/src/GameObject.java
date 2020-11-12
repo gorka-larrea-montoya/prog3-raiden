@@ -7,12 +7,10 @@ public abstract class GameObject {
 	protected float velY;
 	protected ID id;
 	
-	public GameObject(int x, int y, ID id) {
+	public GameObject(int x, int y) {
 		this.x = x;
 		this.y = y;
-		this.id = id;
 	}
-	
 
 
 	public abstract void tick();
