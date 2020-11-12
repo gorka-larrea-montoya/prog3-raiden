@@ -88,4 +88,4 @@ public class VentanaPrincipal extends JFrame{
 	}
 
 
-}
+}	//comentario..prueba
