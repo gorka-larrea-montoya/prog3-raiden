@@ -11,8 +11,11 @@ public class Box extends GameObject {
 	}
 
 	public void tick() {
+		this.contadorGuion++;
+		
 		x += velX;
 		y += velY;
+		//System.out.println(contadorGuion);
 	}
 
 	public void render(Graphics g) {

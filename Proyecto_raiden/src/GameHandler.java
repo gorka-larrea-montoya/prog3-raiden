@@ -10,15 +10,17 @@ public class GameHandler {
 
 	
 	public void tick() {
-		//sorprendentemente las balas hay que tratarlas en esta clase y no en bullet 
-		for (int i = 0; i < objectList.size(); i++) {
-			objectList.get(i).tick();
-			
+			for (int i = 0; i < objectList.size(); i++) {
 				
-							
+				
+				if (objectList.get(i).getId() == ID.EnemyBullet) {
+					if (objectList.get(i).getY() > 700) {
+						objectList.remove(objectList.get(i));
+						System.out.println("se ha borrado una bala enemiga que se salía del borde");
+					}
+				}
 			
-			
-			
+				objectList.get(i).tick();
 		}
 	}
 	public void render(Graphics g) {

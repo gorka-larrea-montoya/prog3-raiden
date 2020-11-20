@@ -45,10 +45,22 @@ public class VentanaPrincipal extends JFrame{
 		panelNombre.add(botonConfirmarNombre);
 		panelNombre.add(labelNombreResp);
 		
+		JButton botonIniciarNivelNegro = new JButton("Nivel Negro");
+		botonIniciarNivelNegro.setSize(20, 60);
+		botonIniciarNivelNegro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new NivelNegro();
+			}
+		});
 		
 		
-		JButton botonIniciarPartida = new JButton("Iniciar Partida");
-		botonIniciarPartida.setSize(20, 60);
+		JButton botonIniciarNivelRojo = new JButton("Nivel Rojo");
+		botonIniciarNivelRojo.setSize(20, 60);
+		botonIniciarNivelRojo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new NivelRojo();
+			}
+		});
 		
 		JButton botonPuntuaciones = new JButton("Mejores Puntuaciones");
 		botonPuntuaciones.setSize(20, 60);
@@ -56,10 +68,11 @@ public class VentanaPrincipal extends JFrame{
 		JButton botonAjustes = new JButton("Ajustes");
 		botonAjustes.setSize(20, 60);
 		
-		panelBotonesInicio.add(botonIniciarPartida);
+		
+		panelBotonesInicio.add(botonIniciarNivelRojo);
 		panelBotonesInicio.add(botonPuntuaciones);
 		panelBotonesInicio.add(botonAjustes);
-		
+		panelBotonesInicio.add(botonIniciarNivelNegro);
 		
 		botonConfirmarNombre.addActionListener(new ActionListener() {
 			

@@ -6,6 +6,7 @@ public abstract class GameObject {
 	protected float velX;
 	protected float velY;
 	protected ID id;
+	protected long contadorGuion;
 	
 	public GameObject(int x, int y) {
 		this.x = x;
