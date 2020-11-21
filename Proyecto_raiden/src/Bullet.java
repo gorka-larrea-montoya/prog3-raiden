@@ -13,11 +13,11 @@ public class Bullet extends GameObject{
 	}
 	public void tick() {
 		x += velX;
-		y += -2;
+		y += -5;
 		colision();	
 		if (y < 0) {
 			handler.removeobject(this);
-			System.out.println("se ha borrado una bala porque estaba demasiado arriba");
+			//System.out.println("se ha borrado una bala porque estaba demasiado arriba");
 		}
 	}
 	public void colision() {
@@ -26,6 +26,7 @@ public class Bullet extends GameObject{
 				GameObject temp = handler.objectList.get(i);
 				if(getRectangle().intersects(temp.getRectangle())){
 					handler.removeobject(temp);
+					handler.removeobject(this);
 				}
 			}
 			

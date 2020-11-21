@@ -25,13 +25,13 @@ public class EnemyBullet extends GameObject{
 	@Override
 	public void render(Graphics g) {
 		g.setColor(Color.white);
-		g.fillOval(x,y,5,5);
+		g.fillOval(x,y,5,10);
 		
 	}
 
 	@Override
 	public Rectangle getRectangle() {
-		return new Rectangle(x,y,4,4);
+		return new Rectangle(x,y,8,8);
 	}
 
 }

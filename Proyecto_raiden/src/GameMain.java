@@ -11,7 +11,7 @@ public abstract class GameMain extends Canvas implements Runnable{
 	Thread gameThread;
 	Color colortest;
 	GameHandler handler;
-	long ContadorGuion = 0;
+	int ContadorGuion = 0;
 	
 	public GameMain(){
 		new Ventana(1000, 600, "JuegoEjemplo", this);
@@ -124,7 +124,7 @@ public abstract class GameMain extends Canvas implements Runnable{
 		return ContadorGuion;
 	}
 
-	public void setContadorGuion(long contadorGuion) {
+	public void setContadorGuion(int contadorGuion) {
 		ContadorGuion = contadorGuion;
 	}
 

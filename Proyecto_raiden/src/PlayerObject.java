@@ -11,7 +11,7 @@ public class PlayerObject extends GameObject {
 	public PlayerObject(int x, int y, GameHandler handler) {
 		super(x, y);
 		this.handler = handler;
-		speed = 3;
+		speed = 4;
 		this.id = id.Player;
 
 	}
@@ -46,9 +46,9 @@ public class PlayerObject extends GameObject {
 	}
 	public void render(Graphics g) {
 		g.setColor(Color.GREEN);
-		g.fillRect(x, y, 32, 48);
+		g.fillOval(x, y, 32, 32);
 	}
 	public Rectangle getRectangle() {
-		return new Rectangle(x,y,32,48);
+		return new Rectangle(x,y,32,32);
 	}
 }
