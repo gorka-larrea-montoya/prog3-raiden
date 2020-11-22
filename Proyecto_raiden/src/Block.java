@@ -1,12 +1,12 @@
 import java.awt.*;
 
-public class Box extends GameObject {
+public class Block extends GameObject {
 
-	public Box(int x, int y,float velx,float vely,ID id) {
+	public Block(int x, int y,float velx,float vely,ID id) {
 		super(x,y);
 		this.velX = velx;
 		this.velY = vely;
-		this.id = id.Enemy;
+		this.id = ID.Block;
 
 	}
 
@@ -23,6 +23,12 @@ public class Box extends GameObject {
 
 	public Rectangle getRectangle() {
 		return new Rectangle(x,y,32,32);
+	}
+
+	@Override
+	public void paint(Graphics2D g2) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

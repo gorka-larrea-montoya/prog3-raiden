@@ -1,4 +1,5 @@
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.util.LinkedList;
 
 public class GameHandler {
@@ -13,25 +14,30 @@ public class GameHandler {
 		//sorprendentemente las balas hay que tratarlas en esta clase y no en bullet 
 		for (int i = 0; i < objectList.size(); i++) {
 			objectList.get(i).tick();
-			
-				
-							
-			
-			
-			
+		}for (int i = 0; i < objectList.size(); i++) {
+			if(objectList.get(i).getY() > 700) {
+				objectList.remove(objectList.get(i));
+				System.out.println("se ha borrado una bala enemiga que salía del borde");
+			}
 		}
 	}
 	public void render(Graphics g) {
 		for (int i = 0; i < objectList.size(); i++) {
 			objectList.get(i).render(g);
+			objectList.get(i).paint((Graphics2D) g);
+			
 		}
 	}
+	
+	
+	
 	public void addObject(GameObject a) {
 		objectList.add(a);
 	}
 	public void removeobject(GameObject a) {
 		objectList.remove(a);
 	}//GETTERS SETTERS
+	
 	public boolean isUp() {
 		return up;
 	}

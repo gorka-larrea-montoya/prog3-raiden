@@ -15,6 +15,7 @@ public abstract class GameObject {
 
 	public abstract void tick();
 	public abstract void render(Graphics g);
+	public abstract void paint(Graphics2D g2);
 	public abstract Rectangle getRectangle();
 	//GETTERS Y SETTERS
 	public ID getId() {

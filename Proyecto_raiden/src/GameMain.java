@@ -1,6 +1,7 @@
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
 
 
@@ -18,8 +19,29 @@ public class GameMain extends Canvas implements Runnable{
 		start();
 		
 		handler = new GameHandler();
-		handler.addObject(new Box(100,200,0,0,ID.Block));
-		handler.addObject(new Box(200,200,0,0,ID.Block));
+		handler.addObject(new Block(100,0,0,0,ID.Block));
+		handler.addObject(new Block(200,0,0,0,ID.Block));
+		
+		handler.addObject(new Enemy(430,0,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(460,0,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(490,0,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(520,0,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(550,0,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(580,0,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(610,0,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(640,0,0,0, ID.Enemy, handler));
+		
+		handler.addObject(new Enemy(430,30,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(460,30,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(490,30,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(520,30,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(550,30,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(580,30,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(610,30,0,0, ID.Enemy, handler));
+		handler.addObject(new Enemy(640,30,0,0, ID.Enemy, handler));
+		
+		handler.addObject(new MejoraDoble(600,70,0,0, ID.PowerUp));
+		
 		this.addKeyListener(new Inputs(handler));
 		handler.addObject(new PlayerObject(300, 300,handler));
 	}	
@@ -39,6 +61,11 @@ public class GameMain extends Canvas implements Runnable{
 		}
 	}//un gameloop robado de internet calcula el juego tropecientas veces por segundo y pinta 60 veces por segundo
 	
+	
+	public void generateEnemies() {
+		
+		
+	}
 	public void run() { 
 		this.requestFocus();
 		long lastTime = System.nanoTime();
@@ -67,10 +94,10 @@ public class GameMain extends Canvas implements Runnable{
 		}
 		stop();
 		
-	}//aqui se hacen los cálculos cada segundo
+	}//aqui se hacen los cï¿½lculos cada segundo
 	public void tick(){ 
 		if (colortest == null) {
-			colortest = Color.red;
+			colortest = Color.black;
 		}/*
 		int redTest = colortest.getRed() -1;
 		int blueTest = colortest.getBlue() +1;
@@ -88,6 +115,8 @@ public class GameMain extends Canvas implements Runnable{
 			return;
 		}
 		Graphics g = bs.getDrawGraphics();
+		
+		
 		///// AQUI SE PINTA LA PANTALLA 
 		
 		g.setColor(colortest);
@@ -97,6 +126,7 @@ public class GameMain extends Canvas implements Runnable{
 		handler.render(g);
 		
 		///// AQUI TERMINAMOS DE PINTAR LA PANTALLA
+		
 		g.dispose();
 		bs.show();
 	}
