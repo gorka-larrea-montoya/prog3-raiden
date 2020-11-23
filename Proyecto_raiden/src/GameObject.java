@@ -6,7 +6,6 @@ public abstract class GameObject {
 	protected float velX;
 	protected float velY;
 	protected ID id;
-	protected long contadorGuion;
 	
 	public GameObject(int x, int y) {
 		this.x = x;
@@ -16,6 +15,7 @@ public abstract class GameObject {
 
 	public abstract void tick();
 	public abstract void render(Graphics g);
+	public abstract void paint(Graphics2D g2);
 	public abstract Rectangle getRectangle();
 	//GETTERS Y SETTERS
 	public ID getId() {

@@ -1,30 +1,27 @@
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
 
 
 public abstract class GameMain extends Canvas implements Runnable{
-	
+
 	static final long serialVersionUID = 517368560782680288L;
 	boolean isRunning = false;
 	Thread gameThread;
 	Color colortest;
 	GameHandler handler;
-	int ContadorGuion = 0;
+	int contadorGuion;
+
 	
-	public GameMain(){
-		new Ventana(1000, 600, "JuegoEjemplo", this);
-		start();
-		
-		
-	}	
 	
-	private void start(){
+	
+	protected void start(){
 		isRunning = true;
 		gameThread = new Thread(this);
 		gameThread.start();
-	} private void stop() {
+	} protected void stop() {
 		isRunning = false;
 		try {
 			gameThread.join();
@@ -33,7 +30,12 @@ public abstract class GameMain extends Canvas implements Runnable{
 		}
 	}//un gameloop robado de internet calcula el juego tropecientas veces por segundo y pinta 60 veces por segundo
 	
-	public void run() {
+	
+	public void generateEnemies() {
+		
+		
+	}
+	public void run() { 
 		this.requestFocus();
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 60.0;
@@ -61,11 +63,17 @@ public abstract class GameMain extends Canvas implements Runnable{
 		}
 		stop();
 		
-	}//aqui se hacen los cálculos cada segundo
+	}//aqui se hacen los cï¿½lculos cada segundo
 	public void tick(){ 
-		ContadorGuion++;
+		/*
+		int redTest = colortest.getRed() -1;
+		int blueTest = colortest.getBlue() +1;
+		int greenTest = colortest.getGreen() +1;
+		colortest = new Color(redTest,blueTest,greenTest);
+		//esto es una domstracion de que la pantalla pinta y cambia de color
+		*/
 		handler.tick();
-		//System.out.println(ContadorGuion);
+		contadorGuion++;
 		
 	}//aqui se pinta la pantalla
 	public void render() {
@@ -75,6 +83,8 @@ public abstract class GameMain extends Canvas implements Runnable{
 			return;
 		}
 		Graphics g = bs.getDrawGraphics();
+		
+		
 		///// AQUI SE PINTA LA PANTALLA 
 		
 		g.setColor(colortest);
@@ -84,52 +94,9 @@ public abstract class GameMain extends Canvas implements Runnable{
 		handler.render(g);
 		
 		///// AQUI TERMINAMOS DE PINTAR LA PANTALLA
+		
 		g.dispose();
 		bs.show();
-	}
-
-	public boolean isRunning() {
-		return isRunning;
-	}
-
-	public void setRunning(boolean isRunning) {
-		this.isRunning = isRunning;
-	}
-
-	public Thread getGameThread() {
-		return gameThread;
-	}
-
-	public void setGameThread(Thread gameThread) {
-		this.gameThread = gameThread;
-	}
-
-	public Color getColortest() {
-		return colortest;
-	}
-
-	public void setColortest(Color colortest) {
-		this.colortest = colortest;
-	}
-
-	public GameHandler getHandler() {
-		return handler;
-	}
-
-	public void setHandler(GameHandler handler) {
-		this.handler = handler;
-	}
-
-	public long getContadorGuion() {
-		return ContadorGuion;
-	}
-
-	public void setContadorGuion(int contadorGuion) {
-		ContadorGuion = contadorGuion;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 				
 }
