@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class Block extends GameObject {
-
+//NO USAR MAS POR AHORA
 	public Block(int x, int y,float velx,float vely,ID id) {
 		super(x,y);
 		this.velX = velx;

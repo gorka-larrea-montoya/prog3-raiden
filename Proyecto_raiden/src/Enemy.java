@@ -23,8 +23,8 @@ public class Enemy extends GameObject{
 	
 	public Enemy(int x, int y, float velX, float velY, ID id, GameHandler handler) {
 		super(x, y);
-		this.velX = 0;
-		this.velY = 0;
+		this.velX = velX;
+		this.velY = velY;
 		this.id = ID.Enemy;
 		this.handler = handler;
 		

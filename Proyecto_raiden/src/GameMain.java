@@ -5,54 +5,23 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
 
 
-public class GameMain extends Canvas implements Runnable{
+public abstract class GameMain extends Canvas implements Runnable{
 
-	private static final long serialVersionUID = 517368560782680288L;
-	private boolean isRunning = false;
-	private Thread gameThread;
-	private Color colortest;
-	private GameHandler handler;
+	static final long serialVersionUID = 517368560782680288L;
+	boolean isRunning = false;
+	Thread gameThread;
+	Color colortest;
+	GameHandler handler;
+	int contadorGuion;
 
 	
-	public GameMain(){
-		new Ventana(1000, 600, "JuegoEjemplo", this);
-		start();
-		
-		handler = new GameHandler();
-		handler.addObject(new Block(100,0,0,0,ID.Block));
-		handler.addObject(new Block(200,0,0,0,ID.Block));
-		
-		handler.addObject(new Enemy(430,0,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(460,0,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(490,0,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(520,0,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(550,0,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(580,0,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(610,0,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(640,0,0,0, ID.Enemy, handler));
-		
-		handler.addObject(new Enemy(430,30,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(460,30,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(490,30,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(520,30,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(550,30,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(580,30,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(610,30,0,0, ID.Enemy, handler));
-		handler.addObject(new Enemy(640,30,0,0, ID.Enemy, handler));
-		
-		handler.addObject(new MejoraDoble(600,70,0,0, ID.PowerUp));
-		
-		this.addKeyListener(new Inputs(handler));
-		handler.addObject(new PlayerObject(300, 300,handler));
-	}	
-	public static void main(String[] args) {
-		new GameMain();	
-	}
-	private void start(){
+	
+	
+	protected void start(){
 		isRunning = true;
 		gameThread = new Thread(this);
 		gameThread.start();
-	} private void stop() {
+	} protected void stop() {
 		isRunning = false;
 		try {
 			gameThread.join();
@@ -96,9 +65,7 @@ public class GameMain extends Canvas implements Runnable{
 		
 	}//aqui se hacen los c�lculos cada segundo
 	public void tick(){ 
-		if (colortest == null) {
-			colortest = Color.black;
-		}/*
+		/*
 		int redTest = colortest.getRed() -1;
 		int blueTest = colortest.getBlue() +1;
 		int greenTest = colortest.getGreen() +1;
@@ -106,6 +73,7 @@ public class GameMain extends Canvas implements Runnable{
 		//esto es una domstracion de que la pantalla pinta y cambia de color
 		*/
 		handler.tick();
+		contadorGuion++;
 		
 	}//aqui se pinta la pantalla
 	public void render() {

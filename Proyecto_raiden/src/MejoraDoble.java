@@ -5,7 +5,7 @@ import java.awt.Rectangle;
 
 public class MejoraDoble extends GameObject{
 	
-	public MejoraDoble(int x, int y, float velx, float vely, ID PowerUp) {
+	public MejoraDoble(int x, int y, float velx, float vely) {
 		super(x, y);
 		this.velX = velx;
 		this.velY = vely;

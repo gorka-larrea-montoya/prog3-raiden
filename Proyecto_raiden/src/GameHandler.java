@@ -17,7 +17,7 @@ public class GameHandler {
 		}for (int i = 0; i < objectList.size(); i++) {
 			if(objectList.get(i).getY() > 700) {
 				objectList.remove(objectList.get(i));
-				System.out.println("se ha borrado una bala enemiga que salía del borde");
+				//System.out.println("se ha borrado una bala enemiga que salia del borde");
 			}
 		}
 	}

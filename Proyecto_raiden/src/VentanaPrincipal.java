@@ -21,7 +21,7 @@ public class VentanaPrincipal extends JFrame{
 		
 		setTitle("Raiden_Reborn");
 		JPanel panelBotonesInicio = new JPanel();
-		panelBotonesInicio.setLayout(new GridLayout(1,3));
+		panelBotonesInicio.setLayout(new GridLayout(1,4));
 		
 		JPanel panelNombre = new JPanel();
 		panelNombre.setLayout(new FlowLayout());
@@ -47,8 +47,24 @@ public class VentanaPrincipal extends JFrame{
 		
 		
 		
-		JButton botonIniciarPartida = new JButton("Iniciar Partida");
-		botonIniciarPartida.setSize(20, 60);
+		JButton botonNivel1 = new JButton("Nivel 1");
+		botonNivel1.setSize(20, 60);
+		botonNivel1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new Nivel1();
+				
+			}
+		});
+		JButton botonNivel2 = new JButton("Nivel 2");
+		botonNivel2.setSize(20, 60);
+		botonNivel2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new Nivel2();
+				
+			}
+		});
 		
 		JButton botonPuntuaciones = new JButton("Mejores Puntuaciones");
 		botonPuntuaciones.setSize(20, 60);
@@ -56,7 +72,8 @@ public class VentanaPrincipal extends JFrame{
 		JButton botonAjustes = new JButton("Ajustes");
 		botonAjustes.setSize(20, 60);
 		
-		panelBotonesInicio.add(botonIniciarPartida);
+		panelBotonesInicio.add(botonNivel1);
+		panelBotonesInicio.add(botonNivel2);
 		panelBotonesInicio.add(botonPuntuaciones);
 		panelBotonesInicio.add(botonAjustes);
 		
