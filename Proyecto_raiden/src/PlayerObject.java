@@ -55,7 +55,7 @@ public class PlayerObject extends GameObject {
 		for (int i = 0; i < handler.objectList.size(); i++) {
 			if (handler.objectList.get(i).id != ID.Player) {
 				if(getRectangle().intersects(handler.objectList.get(i).getRectangle())){
-					System.out.println("el jugador esta chocando con algo");
+					System.out.println("el jugador esta chocando con " + (handler.objectList.get(i).id.toString()));
 				}
 			}
 			
