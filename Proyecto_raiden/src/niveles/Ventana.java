@@ -1,5 +1,8 @@
+package niveles;
 import java.awt.*;
 import javax.swing.*;
+
+import logica_interna.GameMain;
 
 public class Ventana extends JFrame{
  

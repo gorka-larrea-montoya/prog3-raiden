@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -10,8 +11,8 @@ public abstract class GameMain extends Canvas implements Runnable{
 	static final long serialVersionUID = 517368560782680288L;
 	boolean isRunning = false;
 	Thread gameThread;
-	Color colortest;
-	GameHandler handler;
+	protected Color colortest;
+	protected GameHandler handler;
 	int contadorGuion;
 
 	

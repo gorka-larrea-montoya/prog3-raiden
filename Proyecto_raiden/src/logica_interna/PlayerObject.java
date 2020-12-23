@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -52,10 +53,10 @@ public class PlayerObject extends GameObject {
 		if (handler.isRight()) {velX =+ speed;}else if (!handler.isLeft()) {velX = 0;}
 	}
 	public void colision() {
-		for (int i = 0; i < handler.objectList.size(); i++) {
-			if (handler.objectList.get(i).id != ID.Player) {
-				if(getRectangle().intersects(handler.objectList.get(i).getRectangle())){
-					System.out.println("el jugador esta chocando con " + (handler.objectList.get(i).id.toString()));
+		for (int i = 0; i < handler.getObjectList().size(); i++) {
+			if (handler.getObjectList().get(i).id != ID.Player) {
+				if(getRectangle().intersects(handler.getObjectList().get(i).getRectangle())){
+					System.out.println("el jugador esta chocando con " + (handler.getObjectList().get(i).id.toString()));
 				}
 			}
 			

@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -37,9 +38,9 @@ public class Bullet extends GameObject{
 	}
 	
 	public void colision() {
-		for (int i = 0; i < handler.objectList.size(); i++) {
-			if (handler.objectList.get(i).id == ID.Enemy) {
-				GameObject temp = handler.objectList.get(i);
+		for (int i = 0; i < handler.getObjectList().size(); i++) {
+			if (handler.getObjectList().get(i).id == ID.Enemy) {
+				GameObject temp = handler.getObjectList().get(i);
 				if(getRectangle().intersects(temp.getRectangle())){
 					handler.removeobject(this);
 					handler.removeobject(temp);

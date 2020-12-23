@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -40,8 +41,7 @@ public class Enemy extends GameObject{
 
 	@Override
 	public void tick() {
-		x += velX;
-		y += velY;
+		move();
 		
 		choose = r.nextInt(200);
 		
@@ -51,6 +51,10 @@ public class Enemy extends GameObject{
 			//velY = velY + (float)0.07;
 		}
 		
+	}
+	public void move() {
+		setX((int) (getX() + getVelX()));
+		setY((int) (getY() + getVelY()));
 	}
 
 	@Override
