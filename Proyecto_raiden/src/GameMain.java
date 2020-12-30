@@ -13,14 +13,15 @@ public abstract class GameMain extends Canvas implements Runnable{
 	Color colortest;
 	GameHandler handler;
 	int contadorGuion;
-
 	
+
+
 	
 	
 	protected void start(){
 		isRunning = true;
 		gameThread = new Thread(this);
-		gameThread.start();
+		gameThread.start(); 
 	} protected void stop() {
 		isRunning = false;
 		try {

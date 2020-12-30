@@ -12,6 +12,7 @@ import javax.imageio.ImageIO;
 public class Bullet extends GameObject{
 	GameHandler handler;
 	BufferedImage bulletImage;
+	static PlayerObject p;
 	//TODO arreglar que las balas necesiten del ID de bala
 
 	public Bullet(int x, int y,GameHandler handler) {
@@ -27,8 +28,9 @@ public class Bullet extends GameObject{
 	
 	public void tick() {
 		x += velX;
-		y += -2;
+		y += -6;
 		colision();
+		
 		
 		if (y < 0) {
 			handler.removeobject(this);
@@ -43,12 +45,13 @@ public class Bullet extends GameObject{
 				if(getRectangle().intersects(temp.getRectangle())){
 					handler.removeobject(this);
 					handler.removeobject(temp);
-					
+				//	p.killedEnemy(); sumar puntos aqui? o que sea una funcion de esto + tiempo
 				}
 			}
 			
 		}
 	}
+	
 	
 	
 	public void render(Graphics g) {

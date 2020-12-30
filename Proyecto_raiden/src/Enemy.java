@@ -19,12 +19,14 @@ public class Enemy extends GameObject{
 	
 	BufferedImage enemyImage;
 	BufferedImage enemyBulletImage;
+	private int health;
 	
 	
 	public Enemy(int x, int y, float velX, float velY, ID id, GameHandler handler) {
 		super(x, y);
 		this.velX = velX;
 		this.velY = velY;
+		this.health = 40;
 		this.id = ID.Enemy;
 		this.handler = handler;
 		
@@ -45,7 +47,7 @@ public class Enemy extends GameObject{
 		
 		choose = r.nextInt(200);
 		
-		if(choose ==0 ) {
+		if(choose == 0) {
 			velX = (r.nextInt(1));
 			shoot(this);
 			//velY = velY + (float)0.07;
@@ -76,6 +78,20 @@ public class Enemy extends GameObject{
 	}
 	
 	
+	public void colision() {
+		for (int i = 0; i < handler.objectList.size(); i++) {
+			if (handler.objectList.get(i).id == ID.Enemy) {
+				
+				GameObject temp = handler.objectList.get(i);
+				if(getRectangle().intersects(temp.getRectangle())){
+					handler.removeobject(this);
+					handler.removeobject(temp);
+					
+				}
+			}
+			
+		}
+	}
 	
 	public void shoot(Enemy e) {
 	handler.addObject(new EnemyBullet(e.getX(), e.getY(),handler));

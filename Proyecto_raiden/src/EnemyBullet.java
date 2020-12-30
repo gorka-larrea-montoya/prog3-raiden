@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
+import java.awt.Window;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -29,26 +30,26 @@ public class EnemyBullet extends GameObject{
 		x += velX;
 		y += +2;
 		colision();
-		
-		if (y < 0) {
-			handler.removeobject(this);
-			System.out.println("se ha borrado una bala porque estaba demasiado arriba");
 		}
-	}
 	
 	public void colision() {
 		for (int i = 0; i < handler.objectList.size(); i++) {
-			if (handler.objectList.get(i).id == ID.Player) {
-				GameObject tempPlayer = handler.objectList.get(i);
-				if(getRectangle().intersects(tempPlayer.getRectangle())){
-					handler.removeobject(this);
-					//handler.removeobject(tempPlayer);
+				if (handler.objectList.get(i).id == ID.Player) {
+					PlayerObject tempPlayer =(PlayerObject) handler.objectList.get(i);
+					if(getRectangle().intersects(tempPlayer.getRectangle())){
+						handler.removeobject(this);
+						//tempPlayer.enemyBulletDamage();
+						tempPlayer.setHealth(tempPlayer.getHealth() - 25);
+							if(tempPlayer.getHealth() <= 0) {
+								handler.removeobject(tempPlayer);//muere jugador por herida de bala(hp<0)
+							}
+						System.out.println("HP: " + tempPlayer.getHealth());
+					}	
 					
-				}
 			}
-			
 		}
 	}
+
 	
 	
 	
@@ -64,10 +65,10 @@ public class EnemyBullet extends GameObject{
 	@Override
 	public void paint(Graphics2D g2) {
 		// TODO Auto-generated method stub
-		for (int i = 0; i < handler.objectList.size(); i++) {
-			if (handler.objectList.get(i).getId() == ID.Enemy) {	
-					}
-				}
+		//for (int i = 0; i < handler.objectList.size(); i++) {
+		//	if (handler.objectList.get(i).getId() == ID.Enemy) {	
+		//			}
+		//		}
 		   AffineTransform at = new AffineTransform();
 	       at.translate(x+55,y+35);	     //Corrección de Imagen balaEnemigo
 	       at.rotate(-Math.PI);

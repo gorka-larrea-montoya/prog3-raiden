@@ -9,11 +9,19 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 
 public class VentanaPrincipal extends JFrame{
 	private static final long serialVersionUID = -7674724656858770912L;
-
+	protected static final GameHandler handler = null;
+	static JTable leadboardTable;
+	DefaultTableModel leadBoardTableModel;
+	JScrollPane leadBoardJScroll;
+	String nombreDelJugador;
+	
 
 
 	public VentanaPrincipal() {
@@ -53,21 +61,50 @@ public class VentanaPrincipal extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new Nivel1();
-				
 			}
 		});
+		
 		JButton botonNivel2 = new JButton("Nivel 2");
 		botonNivel2.setSize(20, 60);
 		botonNivel2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new Nivel2();
-				
+			//	String nombreJug = nombreField.;
+				new Nivel2(nombreDelJugador);	
 			}
 		});
 		
 		JButton botonPuntuaciones = new JButton("Mejores Puntuaciones");
 		botonPuntuaciones.setSize(20, 60);
+		
+		
+
+        Class[] clases = {String.class, Integer.class};
+        leadBoardTableModel = new DefaultTableModel() {
+            @Override
+            public Class<?> getColumnClass(int columnIndex) {
+                return clases[columnIndex];
+            }
+        };
+        
+        leadboardTable = new JTable(leadBoardTableModel);
+        leadboardTable.setEnabled(false);
+        
+        leadBoardTableModel.addColumn("PLAYER: ");
+        leadBoardTableModel.addColumn("SCORE: ");
+        
+        leadBoardJScroll = new JScrollPane(leadboardTable);
+        botonPuntuaciones.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				//add(leadboardTable);
+				new LeaderboardWindow();
+				
+			}
+		});
+        
+
 		
 		JButton botonAjustes = new JButton("Ajustes");
 		botonAjustes.setSize(20, 60);
@@ -77,16 +114,39 @@ public class VentanaPrincipal extends JFrame{
 		panelBotonesInicio.add(botonPuntuaciones);
 		panelBotonesInicio.add(botonAjustes);
 		
-		
 		botonConfirmarNombre.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				String nombreJug = new String(nombreField.getText());
-				labelNombreResp.setText(nombreJug);
-				repaint();
+				nombreDelJugador = nombreField.getText().toString();
+				PlayerObject newPlayer = new PlayerObject(getX(),getY());
+				newPlayer.setName(nombreField.getText());
+				
+			//	player.setName(newPlayer.getName());
+				//player.setName(nombreField.getText());
+				//setName(newPlayer, nombreField.getText());
+				
+				//PlayerObject newPlayer = new PlayerObject(getX(), getY(), handler, nombreField.getText());
+				//player.setName(nombreField.getText());
+				
+				Object[] newPlayerSaved = {newPlayer.getName(), newPlayer.getScore()};
+				setPlayerName(newPlayer);
+                //leadBoardTableModel.addRow(leadboardTable);
+				
+				
+				leadBoardTableModel.addRow(newPlayerSaved);
+				////falta guardar nombre en jugador
+				//repaint();
+				
 			}
+			
+			public String setPlayerName(PlayerObject player){
+				String namme = player.name;
+				return namme;
+			}
+			
+		
 		});
 		
 		this.add(panelNombre, BorderLayout.CENTER);
@@ -96,13 +156,22 @@ public class VentanaPrincipal extends JFrame{
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setResizable(true);
 		
+		
+	
+		
 		}
 	
 		
-
+	public String newPlayerName(String playerName_new) {
+		
+		return playerName_new;
+	}
+	
 	public static void main(String[] args) {
 		new VentanaPrincipal();
 	}
 
-
+    public static void setName(PlayerObject player, String name) {
+    	player.setName(name);;
+    }
 }	//comentario..prueba

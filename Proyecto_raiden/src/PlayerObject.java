@@ -9,23 +9,30 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-
 public class PlayerObject extends GameObject {
+
 	GameHandler handler;
+	String name;
+	int health;
 	int speed;
+	int score;
+
+
 	Mejoras mejoraActual = Mejoras.ESTANDAR;
 	
 	BufferedImage playerImage;
 	//String playerPath = "resources/player.png";
 //	Image plyr = this.getClass().getResource(playerPath);
-	
-	
-	public PlayerObject(int x, int y, GameHandler handler) {
+
+	public PlayerObject(int x, int y, GameHandler handler, String name,int health, int score) {
 		super(x, y);
 		this.handler = handler;
-		speed = (int) 3.5 ;
+		this.name = name;
+		this.health = 100;
+		this.speed = (int) 4 ;
 		this.id = ID.Player;
 		this.mejoraActual = getMejoraActual();
+		this.score = 0;
 		
 	    try{
 	    	 playerImage = ImageIO.read(new File("./resources/player2.png"));
@@ -33,6 +40,59 @@ public class PlayerObject extends GameObject {
 	        	e.printStackTrace();}
 	        catch(Exception e){e.printStackTrace();}
 	    }
+
+	/*public PlayerObject(int x, int y, GameHandler handler) {
+		super(x, y);
+		this.name = VentanaPrincipal.player.getName();
+		this.handler = null;;
+		this.health = 100;
+		speed = (int) 4 ;
+		this.id = ID.Player;
+		this.mejoraActual = getMejoraActual();
+		this.score = 0;
+	
+	    }
+	*/
+	//public void PlayerObjectSetName(String name) {
+	//	this.name = VentanaPrincipal.sendName(playerName);
+		
+	
+	public PlayerObject(String name, int x, int y, GameHandler handler) {
+		super(x, y);
+		this.name = name;
+		}
+	
+	public PlayerObject(int x,int y) {
+		this.name = name;
+		// TODO Auto-generated constructor stub
+	}
+
+
+	//}
+	public int getHealth() {
+		return health;
+	}
+
+	public void setHealth(int health) {
+		this.health = health;
+	}
+	
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String nombre) {
+		this.name = nombre;
+	}
 
 	public Mejoras getMejoraActual() {
 	
@@ -53,20 +113,26 @@ public class PlayerObject extends GameObject {
 	}
 	public void colision() {
 		for (int i = 0; i < handler.objectList.size(); i++) {
-			if (handler.objectList.get(i).id != ID.Player) {
+			GameObject object = handler.objectList.get(i);
+			if (object.id != ID.Player && object.id != ID.Bullet) {
 				if(getRectangle().intersects(handler.objectList.get(i).getRectangle())){
-					System.out.println("el jugador esta chocando con algo");
+			
+							if (object.id == ID.EnemyBullet){
+							//setHealth(getHealth() - 25);
+							//System.out.println("Player HP: " + getHealth());
+					//System.out.println("el jugador esta chocando con " + object.id);
 				}
+				
 			}
 			
 		}
 	}
-	public void shoot() {
-		
 	}
+	
+
 	public void render(Graphics g) {
-		//g.setColor(Color.GREEN);
-		//g.fillRect(x, y, 30, 40);
+	//	g.setColor(Color.GREEN);
+	//	g.fillRect(x, y, 46, 38);
 	};
 	
 //	public void paint(Graphics2D g2) {
@@ -75,17 +141,36 @@ public class PlayerObject extends GameObject {
 
 	 public void paint(Graphics2D g2){
 	        AffineTransform at = new AffineTransform();
-	       at.translate((int)x + 39 , (int)this.y + 40); 
+	       at.translate((int)x + 48 , (int)this.y + 38); 
 	       at.rotate(Math.PI);
 	    //   at.translate(playerImage.getWidth()/4, playerImage.getHeight()/4);
 	        g2.drawImage(playerImage, at, null);
 	    }
 	
 	public Rectangle getRectangle() {
-		return new Rectangle(x,y,30,40);
+		return new Rectangle(x,y,46,38);
 	}
 
+	
 
+	public void checkHealth() {
+		if (getHealth() <= 0) {
+			handler.removeobject(this);
+		}
+		
+	}
 
+	@Override
+	public String toString() {
+		return 	"Name: " + name + "\n"
+				+ "Health=" + health +"\n"
+				+ "Score=" + score;
+	}
+	
+	//public void killedEnemy() {
+	//	int scoree = getScore() +5 ;
+	//	setScore(scoree);
+//	}
+	
 	
 }

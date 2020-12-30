@@ -8,6 +8,10 @@ public class GameHandler {
 	boolean down = false;
 	boolean left = false;
 	boolean right = false;
+	long waveStartTimer;
+	long waveStartTimerDiff;
+	int waveNumber;
+	boolean waveStart;
 
 	
 	public void tick() {

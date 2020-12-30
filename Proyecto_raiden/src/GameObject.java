@@ -13,6 +13,11 @@ public abstract class GameObject {
 	}
 
 
+	public GameObject() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public abstract void tick();
 	public abstract void render(Graphics g);
 	public abstract void paint(Graphics2D g2);
