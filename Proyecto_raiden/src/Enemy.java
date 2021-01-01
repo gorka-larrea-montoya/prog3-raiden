@@ -53,6 +53,7 @@ public class Enemy extends GameObject{
 			//velY = velY + (float)0.07;
 		}
 		
+		
 	}
 
 	@Override
@@ -80,12 +81,14 @@ public class Enemy extends GameObject{
 	
 	public void colision() {
 		for (int i = 0; i < handler.objectList.size(); i++) {
-			if (handler.objectList.get(i).id == ID.Enemy) {
+			if (handler.objectList.get(i).id == ID.Bullet) {
 				
 				GameObject temp = handler.objectList.get(i);
 				if(getRectangle().intersects(temp.getRectangle())){
+					
 					handler.removeobject(this);
 					handler.removeobject(temp);
+					
 					
 				}
 			}

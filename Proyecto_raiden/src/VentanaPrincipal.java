@@ -132,6 +132,7 @@ public class VentanaPrincipal extends JFrame{
 				
 				Object[] newPlayerSaved = {newPlayer.getName(), newPlayer.getScore()};
 				setPlayerName(newPlayer);
+				
                 //leadBoardTableModel.addRow(leadboardTable);
 				
 				
@@ -144,6 +145,11 @@ public class VentanaPrincipal extends JFrame{
 			public String setPlayerName(PlayerObject player){
 				String namme = player.name;
 				return namme;
+			}
+			
+			public int setPlayerScore(PlayerObject player){
+				int scorre = player.getScore();
+				return scorre;
 			}
 			
 		

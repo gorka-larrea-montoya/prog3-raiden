@@ -147,6 +147,7 @@ public class PlayerObject extends GameObject {
 	        g2.drawImage(playerImage, at, null);
 	    }
 	
+	 
 	public Rectangle getRectangle() {
 		return new Rectangle(x,y,46,38);
 	}
@@ -164,13 +165,18 @@ public class PlayerObject extends GameObject {
 	public String toString() {
 		return 	"Name: " + name + "\n"
 				+ "Health=" + health +"\n"
-				+ "Score=" + score;
+				+ "Score=" + GameMain.score;
 	}
 	
-	//public void killedEnemy() {
-	//	int scoree = getScore() +5 ;
-	//	setScore(scoree);
-//	}
+	public void killedEnemy() {
+		int scoree = getScore() +5 ;
+		setScore(scoree);
+	}
 	
 	
+	public String setHighScore() {
+		String name =  getName();
+		String score = Integer.toString(GameMain.score);
+		return name + ","+ score;
+	}
 }

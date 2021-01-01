@@ -34,17 +34,19 @@ public class Bullet extends GameObject{
 		
 		if (y < 0) {
 			handler.removeobject(this);
-			System.out.println("se ha borrado una bala porque estaba demasiado arriba");
+		//////	System.out.println("se ha borrado una bala porque estaba demasiado arriba");
 		}
 	}
 	
 	public void colision() {
 		for (int i = 0; i < handler.objectList.size(); i++) {
 			if (handler.objectList.get(i).id == ID.Enemy) {
-				GameObject temp = handler.objectList.get(i);
-				if(getRectangle().intersects(temp.getRectangle())){
+				Enemy tempEnemy = (Enemy) handler.objectList.get(i);
+				if(getRectangle().intersects(tempEnemy.getRectangle())){
 					handler.removeobject(this);
-					handler.removeobject(temp);
+					handler.removeobject(tempEnemy);
+					GameMain.score = GameMain.score + 5;
+					System.out.println(GameMain.score);
 				//	p.killedEnemy(); sumar puntos aqui? o que sea una funcion de esto + tiempo
 				}
 			}

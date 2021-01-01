@@ -1,9 +1,20 @@
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+
 
 public class Nivel2 extends GameMain {
 	private static final long serialVersionUID = 6317331953250680569L;
 	PlayerObject player;
 	
+	private String saveDataPath;
+	private String fileName = "SaveData";
 	
 	
 	
@@ -11,6 +22,7 @@ public class Nivel2 extends GameMain {
 		
 		this.colortest = new Color(0, 0, 0);
 		new Ventana(1000, 600, "JuegoEjemplo", this);
+		//this.paint();
 		start();
 		
 		
@@ -25,8 +37,13 @@ public class Nivel2 extends GameMain {
 			
 		}
 		
+		
+		
 	
-			
+		handler.addObject(new Enemy(250 ,250 , (int)0.6, (int)0.75, ID.Enemy, handler));
+		handler.addObject(new Enemy(310 ,250 , (int)0.6, (int)0.75, ID.Enemy, handler));
+		handler.addObject(new Enemy(340 ,250 , (int)0.6, (int)0.75-1, ID.Enemy, handler));
+		
 		
 	
 		
@@ -53,6 +70,7 @@ public class Nivel2 extends GameMain {
 		
 		handler.addObject(new MejoraDoble(600,70,0,0));
 	*/	
+		
 		this.addKeyListener(new Inputs(handler));
 		//player.setName(playername);
 		//player.setX(300);
@@ -65,8 +83,50 @@ public class Nivel2 extends GameMain {
 		System.out.println(player.toString());
 	}	
 	
+	private void createSaveData() {
+		try {
+			File file = new File(saveDataPath, fileName);
+			FileWriter output = new FileWriter(file);
+			BufferedWriter writer = new BufferedWriter(output);
+			writer.write(score);;
+			writer.close();
+			//
+		}catch(Exception e) {
+			e.printStackTrace();
+			}	
+		}
+	
+	
+	private void loadHighScore() {
+		try {
+			File f = new File(saveDataPath, fileName);
+			if(f.isFile()) {
+				createSaveData();
+			}
+			
+			BufferedReader reader = new BufferedReader(new java.io.InputStreamReader(new FileInputStream(f)));
+			//highScore = Integer.parseInt(reader.readLine());
+			}
+		catch(Exception e){
+		e.printStackTrace();
+			}
+	}
+	
+	private void setHighScore() {
+	}
+	
+	
 		public void getPlayer() {
 			
 		}
-
+		
+	/*	public void paint(Graphics g){
+			Font font  = new Font("Serif",Font.BOLD, 36);
+			g.setFont(font);
+			g.setColor(Color.WHITE);
+			
+			g.drawString(Integer.toString(GameMain.score), 200, 150);
+			
+		}
+*/
 }

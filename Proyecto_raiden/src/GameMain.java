@@ -1,5 +1,6 @@
 import java.awt.Canvas;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
@@ -8,16 +9,16 @@ import java.awt.image.BufferStrategy;
 public abstract class GameMain extends Canvas implements Runnable{
 
 	static final long serialVersionUID = 517368560782680288L;
+	static int score = 0;
 	boolean isRunning = false;
 	Thread gameThread;
 	Color colortest;
 	GameHandler handler;
 	int contadorGuion;
 	
+	
 
 
-	
-	
 	protected void start(){
 		isRunning = true;
 		gameThread = new Thread(this);
@@ -45,6 +46,7 @@ public abstract class GameMain extends Canvas implements Runnable{
 		int frames = 0;
 		double delta = 0;
 		while (isRunning) {
+			score++;
 			long now = System.nanoTime();
 			delta += (now - lastTime)/ns;
 			lastTime = now;
@@ -75,6 +77,7 @@ public abstract class GameMain extends Canvas implements Runnable{
 		*/
 		handler.tick();
 		contadorGuion++;
+		GameMain.score = GameMain.score+ (int) 0.1;
 		
 	}//aqui se pinta la pantalla
 	public void render() {
@@ -85,19 +88,35 @@ public abstract class GameMain extends Canvas implements Runnable{
 		}
 		Graphics g = bs.getDrawGraphics();
 		
-		
 		///// AQUI SE PINTA LA PANTALLA 
 		
 		g.setColor(colortest);
 		g.fillRect(0, 0, 1000, 600);
 		
+		
+		String s = Integer.toString(score);
+		g.setColor(Color.WHITE);
+		
+		
 		//CUIDADO QUE LA PARTE DE ARRIBA SE PINTA ANTES Y POR DETRAS DE LA DE ABAJO
 		handler.render(g);
+		
+		g.drawString(s, getWidth() - 150, 50);
 		
 		///// AQUI TERMINAMOS DE PINTAR LA PANTALLA
 		
 		g.dispose();
 		bs.show();
+
+		
 	}
-				
+/*	public void paint(Graphics g){
+		Font font  = new Font("Serif",Font.BOLD, 36);
+		g.setFont(font);
+		g.setColor(Color.WHITE);
+		
+		g.drawString(Integer.toString(GameMain.score), 200, 150);
+		
+	}
+	*/			
 }
