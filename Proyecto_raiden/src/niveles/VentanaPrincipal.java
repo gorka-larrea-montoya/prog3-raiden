@@ -1,3 +1,4 @@
+package niveles;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -10,6 +11,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+
+import logica_interna.*;
+
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -17,7 +21,7 @@ import javax.swing.JTable;
 public class VentanaPrincipal extends JFrame{
 	private static final long serialVersionUID = -7674724656858770912L;
 	protected static final GameHandler handler = null;
-	static JTable leadboardTable;
+	public static JTable leadboardTable;
 	DefaultTableModel leadBoardTableModel;
 	JScrollPane leadBoardJScroll;
 	String nombreDelJugador;
@@ -143,7 +147,7 @@ public class VentanaPrincipal extends JFrame{
 			}
 			
 			public String setPlayerName(PlayerObject player){
-				String namme = player.name;
+				String namme = player.getName();
 				return namme;
 			}
 			

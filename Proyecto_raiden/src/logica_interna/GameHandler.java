@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.LinkedList;
@@ -65,5 +66,8 @@ public class GameHandler {
 	}
 	public void setRight(boolean right) {
 		this.right = right;
+	}
+	public LinkedList<GameObject> getObjectList() {
+		return this.objectList;
 	}
 }

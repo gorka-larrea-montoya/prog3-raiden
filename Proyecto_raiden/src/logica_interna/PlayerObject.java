@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -165,7 +166,7 @@ public class PlayerObject extends GameObject {
 	public String toString() {
 		return 	"Name: " + name + "\n"
 				+ "Health=" + health +"\n"
-				+ "Score=" + GameMain.score;
+				+ "Score=" + GameMain.getScore();
 	}
 	
 	public void killedEnemy() {
@@ -176,7 +177,7 @@ public class PlayerObject extends GameObject {
 	
 	public String setHighScore() {
 		String name =  getName();
-		String score = Integer.toString(GameMain.score);
+		String score = Integer.toString(GameMain.getScore());
 		return name + ","+ score;
 	}
 }

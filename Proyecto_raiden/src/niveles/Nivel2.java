@@ -1,12 +1,13 @@
+package niveles;
 import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
+
+import logica_interna.*;
 
 
 public class Nivel2 extends GameMain {
@@ -20,29 +21,29 @@ public class Nivel2 extends GameMain {
 	
 	public Nivel2(String nomString){
 		
-		this.colortest = new Color(0, 0, 0);
+		this.setColortest(new Color(0, 0, 0));
 		new Ventana(1000, 600, "JuegoEjemplo", this);
 		//this.paint();
 		start();
 		
 		
 		float f = (float) (Math.random() * 1001);
-		handler = new GameHandler();
+		setHandler(new GameHandler());
 		//handler.addObject(new Block(100,0,0,0,ID.Block));
 		//handler.addObject(new Block(200,0,0,0,ID.Block));
 		
 		
 		for(int i = 0; i < 20; i++) {
-			handler.addObject(new Enemy(i*35 ,-250 , (int)0.2 -2+1 +1, (int)1.75+ +1 -2 +1, ID.Enemy, handler));
+			getHandler().addObject(new Enemy(i*35 ,-250 , (int)0.2 -2+1 +1, (int)1.75+ +1 -2 +1, ID.Enemy, getHandler()));
 			
 		}
 		
 		
 		
 	
-		handler.addObject(new Enemy(250 ,250 , (int)0.6, (int)0.75, ID.Enemy, handler));
-		handler.addObject(new Enemy(310 ,250 , (int)0.6, (int)0.75, ID.Enemy, handler));
-		handler.addObject(new Enemy(340 ,250 , (int)0.6, (int)0.75-1, ID.Enemy, handler));
+		getHandler().addObject(new Enemy(250 ,250 , (int)0.6, (int)0.75, ID.Enemy, getHandler()));
+		getHandler().addObject(new Enemy(310 ,250 , (int)0.6, (int)0.75, ID.Enemy, getHandler()));
+		getHandler().addObject(new Enemy(340 ,250 , (int)0.6, (int)0.75-1, ID.Enemy, getHandler()));
 		
 		
 	
@@ -71,14 +72,14 @@ public class Nivel2 extends GameMain {
 		handler.addObject(new MejoraDoble(600,70,0,0));
 	*/	
 		
-		this.addKeyListener(new Inputs(handler));
+		this.addKeyListener(new Inputs(getHandler()));
 		//player.setName(playername);
 		//player.setX(300);
 		//player.setY(300);
 		//player.handler = handler;
-		player = new PlayerObject(300, 300, handler, nomString, 100, 0);
+		player = new PlayerObject(300, 300, getHandler(), nomString, 100, 0);
 		
-		handler.addObject(player);
+		getHandler().addObject(player);
 		 
 		System.out.println(player.toString());
 	}	
@@ -88,7 +89,7 @@ public class Nivel2 extends GameMain {
 			File file = new File(saveDataPath, fileName);
 			FileWriter output = new FileWriter(file);
 			BufferedWriter writer = new BufferedWriter(output);
-			writer.write(score);;
+			writer.write(getScore());;
 			writer.close();
 			//
 		}catch(Exception e) {

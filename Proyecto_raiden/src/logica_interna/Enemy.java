@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -36,15 +37,16 @@ public class Enemy extends GameObject{
 	        	e.printStackTrace();}
 	        catch(Exception e){e.printStackTrace();}
 	    }
-		
+	public void move() {
+		x += velX;
+		y += velY;
+	}
 
 	
 
 	@Override
 	public void tick() {
-		x += velX;
-		y += velY;
-		
+		this.move();		
 		choose = r.nextInt(200);
 		
 		if(choose == 0) {

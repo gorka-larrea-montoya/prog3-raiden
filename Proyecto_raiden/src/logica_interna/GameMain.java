@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Font;
@@ -9,11 +10,11 @@ import java.awt.image.BufferStrategy;
 public abstract class GameMain extends Canvas implements Runnable{
 
 	static final long serialVersionUID = 517368560782680288L;
-	static int score = 0;
+	private static int score = 0;
 	boolean isRunning = false;
 	Thread gameThread;
-	Color colortest;
-	GameHandler handler;
+	private Color colortest;
+	private GameHandler handler;
 	int contadorGuion;
 	
 	
@@ -46,7 +47,7 @@ public abstract class GameMain extends Canvas implements Runnable{
 		int frames = 0;
 		double delta = 0;
 		while (isRunning) {
-			score++;
+			setScore(getScore() + 1);
 			long now = System.nanoTime();
 			delta += (now - lastTime)/ns;
 			lastTime = now;
@@ -75,9 +76,9 @@ public abstract class GameMain extends Canvas implements Runnable{
 		colortest = new Color(redTest,blueTest,greenTest);
 		//esto es una domstracion de que la pantalla pinta y cambia de color
 		*/
-		handler.tick();
+		getHandler().tick();
 		contadorGuion++;
-		GameMain.score = GameMain.score+ (int) 0.1;
+		GameMain.setScore(GameMain.getScore()+ (int) 0.1);
 		
 	}//aqui se pinta la pantalla
 	public void render() {
@@ -90,16 +91,16 @@ public abstract class GameMain extends Canvas implements Runnable{
 		
 		///// AQUI SE PINTA LA PANTALLA 
 		
-		g.setColor(colortest);
+		g.setColor(getColortest());
 		g.fillRect(0, 0, 1000, 600);
 		
 		
-		String s = Integer.toString(score);
+		String s = Integer.toString(getScore());
 		g.setColor(Color.WHITE);
 		
 		
 		//CUIDADO QUE LA PARTE DE ARRIBA SE PINTA ANTES Y POR DETRAS DE LA DE ABAJO
-		handler.render(g);
+		getHandler().render(g);
 		
 		g.drawString(s, getWidth() - 150, 50);
 		
@@ -118,5 +119,23 @@ public abstract class GameMain extends Canvas implements Runnable{
 		g.drawString(Integer.toString(GameMain.score), 200, 150);
 		
 	}
-	*/			
+	*/
+	public Color getColortest() {
+		return colortest;
+	}
+	public void setColortest(Color colortest) {
+		this.colortest = colortest;
+	}
+	public GameHandler getHandler() {
+		return handler;
+	}
+	public void setHandler(GameHandler handler) {
+		this.handler = handler;
+	}
+	public static int getScore() {
+		return score;
+	}
+	public static void setScore(int score) {
+		GameMain.score = score;
+	}			
 }

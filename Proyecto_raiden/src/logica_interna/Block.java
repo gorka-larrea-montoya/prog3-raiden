@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.*;
 
 public class Block extends GameObject {

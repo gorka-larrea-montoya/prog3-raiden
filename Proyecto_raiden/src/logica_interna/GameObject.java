@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.*;
 
 public abstract class GameObject {

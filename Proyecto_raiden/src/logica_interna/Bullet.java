@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -45,8 +46,8 @@ public class Bullet extends GameObject{
 				if(getRectangle().intersects(tempEnemy.getRectangle())){
 					handler.removeobject(this);
 					handler.removeobject(tempEnemy);
-					GameMain.score = GameMain.score + 5;
-					System.out.println(GameMain.score);
+					GameMain.setScore(GameMain.getScore() + 5);
+					System.out.println(GameMain.getScore());
 				//	p.killedEnemy(); sumar puntos aqui? o que sea una funcion de esto + tiempo
 				}
 			}

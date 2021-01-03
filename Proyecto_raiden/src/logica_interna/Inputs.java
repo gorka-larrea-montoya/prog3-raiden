@@ -1,3 +1,4 @@
+package logica_interna;
 import java.awt.event.*;
 
 public class Inputs extends KeyAdapter {
