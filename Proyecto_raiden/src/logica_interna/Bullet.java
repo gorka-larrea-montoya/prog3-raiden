@@ -77,6 +77,13 @@ public class Bullet extends GameObject{
 	public Rectangle getRectangle() {
 		return new Rectangle(x,y,5,22);
 	}
+
+	@Override
+	public String toString() {
+		return "Bullet [" + ", x=" + x + ", y=" + y + ", velX="
+				+ velX + ", velY=" + velY + ", id=" + id + ",hashCode()=" + hashCode() + "]";
+	}
+	
 	
 
 }

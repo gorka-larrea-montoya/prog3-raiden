@@ -2,6 +2,7 @@ package logica_interna;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.LinkedList;
+import java.util.logging.Level;
 
 public class GameHandler {
 	LinkedList<GameObject> objectList = new LinkedList<GameObject>();
@@ -12,7 +13,9 @@ public class GameHandler {
 	long waveStartTimer;
 	long waveStartTimerDiff;
 	int waveNumber;
+	int ticklogger;
 	boolean waveStart;
+	GameMain gameMain;
 
 	
 	public void tick() {
@@ -21,8 +24,8 @@ public class GameHandler {
 			objectList.get(i).tick();
 		}for (int i = 0; i < objectList.size(); i++) {
 			if(objectList.get(i).getY() > 700) {
+				GameMain.getGameLogger().log(Level.FINE,"BORRADO OBJETO QUE SE SALIA DEL BORDE"+ objectList.get(i).toString());
 				objectList.remove(objectList.get(i));
-				//System.out.println("se ha borrado una bala enemiga que salia del borde");
 			}
 		}
 	}
@@ -70,4 +73,44 @@ public class GameHandler {
 	public LinkedList<GameObject> getObjectList() {
 		return this.objectList;
 	}
+	public long getWaveStartTimer() {
+		return waveStartTimer;
+	}
+	public void setWaveStartTimer(long waveStartTimer) {
+		this.waveStartTimer = waveStartTimer;
+	}
+	public long getWaveStartTimerDiff() {
+		return waveStartTimerDiff;
+	}
+	public void setWaveStartTimerDiff(long waveStartTimerDiff) {
+		this.waveStartTimerDiff = waveStartTimerDiff;
+	}
+	public int getWaveNumber() {
+		return waveNumber;
+	}
+	public void setWaveNumber(int waveNumber) {
+		this.waveNumber = waveNumber;
+	}
+	public int getTicklogger() {
+		return ticklogger;
+	}
+	public void setTicklogger(int ticklogger) {
+		this.ticklogger = ticklogger;
+	}
+	public boolean isWaveStart() {
+		return waveStart;
+	}
+	public void setWaveStart(boolean waveStart) {
+		this.waveStart = waveStart;
+	}
+	public GameMain getGameMain() {
+		return gameMain;
+	}
+	public void setGameMain(GameMain gameMain) {
+		this.gameMain = gameMain;
+	}
+	public void setObjectList(LinkedList<GameObject> objectList) {
+		this.objectList = objectList;
+	}
+	
 }
