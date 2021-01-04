@@ -1,62 +1,54 @@
-ene. 04, 2021 1:03:17 P. M. java.awt.EventDispatchThread processException
-FINE: Processing exception: java.lang.NullPointerException
-ene. 04, 2021 1:03:17 P. M. java.awt.Container mixOnValidating
+ene. 04, 2021 9:37:26 P. M. logica_interna.GameMain run
+INFO: Programa comenzado
+ene. 04, 2021 9:37:26 P. M. java.awt.Container mixOnValidating
 FINE: this = javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
-ene. 04, 2021 1:03:17 P. M. java.awt.Container recursiveApplyCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Container recursiveApplyCurrentShape
 FINE: this = javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]; fromZ=0; toZ=0
-ene. 04, 2021 1:03:17 P. M. java.awt.Container recursiveApplyCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Container recursiveApplyCurrentShape
 FINE: this = javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=]; fromZ=0; toZ=1
-ene. 04, 2021 1:03:17 P. M. java.awt.Container recursiveApplyCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Container recursiveApplyCurrentShape
 FINE: this = javax.swing.JLayeredPane[null.layeredPane,0,0,984x561,alignmentX=0.0,alignmentY=0.0,border=,flags=0,maximumSize=,minimumSize=,preferredSize=,optimizedDrawingPossible=true]; fromZ=0; toZ=0
-ene. 04, 2021 1:03:17 P. M. java.awt.Container recursiveApplyCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Container recursiveApplyCurrentShape
 FINE: this = javax.swing.JPanel[null.contentPane,0,0,984x561,layout=javax.swing.JRootPane$1,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]; fromZ=0; toZ=0
-ene. 04, 2021 1:03:17 P. M. java.awt.Component applyCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Component applyCurrentShape
 FINE: this = niveles.Nivel2[canvas0,0,0,984x561]
-ene. 04, 2021 1:03:17 P. M. java.awt.Component calculateCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Component calculateCurrentShape
 FINE: this = niveles.Nivel2[canvas0,0,0,984x561]; normalShape=Region[[8, 31 => 992, 592]]
-ene. 04, 2021 1:03:17 P. M. java.awt.Component calculateCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Component calculateCurrentShape
 FINE: currentShape=Region[[8, 31 => 992, 592]]
-ene. 04, 2021 1:03:17 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+ene. 04, 2021 9:37:26 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
 FINE: sun.awt.TimedWindowEvent[WINDOW_LOST_FOCUS,opposite=javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame0
-ene. 04, 2021 1:03:17 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: Active niveles.VentanaPrincipal[frame0,0,0,800x499,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x460,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], Current focused niveles.VentanaPrincipal[frame0,0,0,800x499,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x460,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], losing focus niveles.VentanaPrincipal[frame0,0,0,800x499,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x460,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true] opposite javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
-ene. 04, 2021 1:03:17 P. M. javax.swing.SortingFocusTraversalPolicy getFirstComponent
-FINE: ### Getting first component in javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
-ene. 04, 2021 1:03:17 P. M. javax.swing.SortingFocusTraversalPolicy getFirstComponent
-FINE: ### Cycle is [javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=], javax.swing.JLayeredPane[null.layeredPane,0,0,984x561,alignmentX=0.0,alignmentY=0.0,border=,flags=0,maximumSize=,minimumSize=,preferredSize=,optimizedDrawingPossible=true], javax.swing.JPanel[null.contentPane,0,0,984x561,layout=javax.swing.JRootPane$1,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=], niveles.Nivel2[canvas0,0,0,984x561]]
-ene. 04, 2021 1:03:17 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: java.awt.event.FocusEvent[FOCUS_LOST,temporary,opposite=javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],cause=ACTIVATION] on javax.swing.JButton[,196,0,196x26,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@6520b2f4,flags=296,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Nivel 2,defaultCapable=true]
-ene. 04, 2021 1:03:17 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: sun.awt.TimedWindowEvent[WINDOW_GAINED_FOCUS,opposite=niveles.VentanaPrincipal[frame0,0,0,800x499,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x460,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame1
-ene. 04, 2021 1:03:17 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: java.awt.event.WindowEvent[WINDOW_ACTIVATED,opposite=niveles.VentanaPrincipal[frame0,0,0,800x499,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x460,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame1
-ene. 04, 2021 1:03:17 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+ene. 04, 2021 9:37:26 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: Active niveles.VentanaPrincipal[frame0,0,0,800x500,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x461,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], Current focused niveles.VentanaPrincipal[frame0,0,0,800x500,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x461,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], losing focus niveles.VentanaPrincipal[frame0,0,0,800x500,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x461,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true] opposite javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+ene. 04, 2021 9:37:26 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.FocusEvent[FOCUS_LOST,temporary,opposite=niveles.Nivel2[canvas0,0,0,984x561],cause=ACTIVATION] on javax.swing.JButton[,196,0,196x26,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@39c39e9e,flags=296,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Nivel 2,defaultCapable=true]
+ene. 04, 2021 9:37:26 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: sun.awt.TimedWindowEvent[WINDOW_GAINED_FOCUS,opposite=niveles.VentanaPrincipal[frame0,0,0,800x500,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x461,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame1
+ene. 04, 2021 9:37:26 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.WindowEvent[WINDOW_ACTIVATED,opposite=niveles.VentanaPrincipal[frame0,0,0,800x500,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x461,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame1
+ene. 04, 2021 9:37:26 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
 FINE: java.awt.event.WindowEvent[WINDOW_DEACTIVATED,opposite=javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame0
-ene. 04, 2021 1:03:17 P. M. javax.swing.SortingFocusTraversalPolicy getFirstComponent
-FINE: ### Getting first component in javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
-ene. 04, 2021 1:03:17 P. M. javax.swing.SortingFocusTraversalPolicy getFirstComponent
-FINE: ### Cycle is [javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=], javax.swing.JLayeredPane[null.layeredPane,0,0,984x561,alignmentX=0.0,alignmentY=0.0,border=,flags=0,maximumSize=,minimumSize=,preferredSize=,optimizedDrawingPossible=true], javax.swing.JPanel[null.contentPane,0,0,984x561,layout=javax.swing.JRootPane$1,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=], niveles.Nivel2[canvas0,0,0,984x561]]
-ene. 04, 2021 1:03:17 P. M. java.awt.Container mixOnValidating
+ene. 04, 2021 9:37:26 P. M. java.awt.Container mixOnValidating
 FINE: this = javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
-ene. 04, 2021 1:03:17 P. M. java.awt.Container recursiveApplyCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Container recursiveApplyCurrentShape
 FINE: this = javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]; fromZ=0; toZ=0
-ene. 04, 2021 1:03:17 P. M. java.awt.Container recursiveApplyCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Container recursiveApplyCurrentShape
 FINE: this = javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=]; fromZ=0; toZ=1
-ene. 04, 2021 1:03:17 P. M. java.awt.Container recursiveApplyCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Container recursiveApplyCurrentShape
 FINE: this = javax.swing.JLayeredPane[null.layeredPane,0,0,984x561,alignmentX=0.0,alignmentY=0.0,border=,flags=0,maximumSize=,minimumSize=,preferredSize=,optimizedDrawingPossible=true]; fromZ=0; toZ=0
-ene. 04, 2021 1:03:17 P. M. java.awt.Container recursiveApplyCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Container recursiveApplyCurrentShape
 FINE: this = javax.swing.JPanel[null.contentPane,0,0,984x561,layout=javax.swing.JRootPane$1,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]; fromZ=0; toZ=0
-ene. 04, 2021 1:03:17 P. M. java.awt.Component applyCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Component applyCurrentShape
 FINE: this = niveles.Nivel2[canvas0,0,0,984x561]
-ene. 04, 2021 1:03:17 P. M. java.awt.Component calculateCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Component calculateCurrentShape
 FINE: this = niveles.Nivel2[canvas0,0,0,984x561]; normalShape=Region[[8, 31 => 992, 592]]
-ene. 04, 2021 1:03:17 P. M. java.awt.Component calculateCurrentShape
+ene. 04, 2021 9:37:26 P. M. java.awt.Component calculateCurrentShape
 FINE: currentShape=Region[[8, 31 => 992, 592]]
-ene. 04, 2021 1:03:17 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+ene. 04, 2021 9:37:26 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
 FINE: java.awt.event.WindowEvent[WINDOW_OPENED,opposite=null,oldState=0,newState=0] on frame1
-ene. 04, 2021 1:03:17 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: java.awt.event.FocusEvent[FOCUS_GAINED,permanent,opposite=null,cause=ACTIVATION] on frame1
-ene. 04, 2021 1:03:17 P. M. sun.awt.im.InputContext activateInputMethod
-FINE: Current client component javax.swing.JFrame[frame1,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
-ene. 04, 2021 1:03:18 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+ene. 04, 2021 9:37:26 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.FocusEvent[FOCUS_GAINED,permanent,opposite=null,cause=ACTIVATION] on canvas0
+ene. 04, 2021 9:37:26 P. M. sun.awt.im.InputContext activateInputMethod
+FINE: Current client component niveles.Nivel2[canvas0,0,0,984x561]
+ene. 04, 2021 9:37:28 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
 FINE: sun.awt.TimedWindowEvent[WINDOW_CLOSING,opposite=null,oldState=0,newState=0] on frame1

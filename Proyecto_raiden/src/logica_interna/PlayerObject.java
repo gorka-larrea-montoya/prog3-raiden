@@ -177,7 +177,7 @@ public class PlayerObject extends GameObject {
 	
 	public String setHighScore() {
 		String name =  getName();
-		String score = Integer.toString(GameMain.getScore());
+		String score = Float.toString(GameMain.getScore());
 		return name + ","+ score;
 	}
 }

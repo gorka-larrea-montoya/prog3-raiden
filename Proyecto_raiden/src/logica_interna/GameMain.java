@@ -1,21 +1,20 @@
 package logica_interna;
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.image.BufferStrategy;
+import java.awt.*;
+import java.awt.image.*;
+import java.io.*;
+import java.util.logging.*;
 
 
 public abstract class GameMain extends Canvas implements Runnable{
 
 	static final long serialVersionUID = 517368560782680288L;
-	private static int score = 0;
+	private static float score = 0;
 	boolean isRunning = false;
 	Thread gameThread;
 	private Color colortest;
 	private GameHandler handler;
 	int contadorGuion;
+	private static Logger gameLogger = Logger.getLogger(GameMain.class.getName());
 	
 	
 
@@ -39,6 +38,10 @@ public abstract class GameMain extends Canvas implements Runnable{
 		
 	}
 	public void run() { 
+		
+		
+		System.out.println("hola?");
+		
 		this.requestFocus();
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 60.0;
@@ -46,6 +49,13 @@ public abstract class GameMain extends Canvas implements Runnable{
 		long timer = System.currentTimeMillis();
 		int frames = 0;
 		double delta = 0;
+
+		try(FileInputStream fis = new FileInputStream("logs/GameLog.properties")) {
+			LogManager.getLogManager().readConfiguration(fis);
+		} catch (Exception e) {
+			gameLogger.log(Level.SEVERE, "No se ha podido leer el fichero de configuración del logger");
+		}
+		gameLogger.log(Level.INFO, "Programa comenzado");
 		while (isRunning) {
 			setScore(getScore() + 1);
 			long now = System.nanoTime();
@@ -65,6 +75,7 @@ public abstract class GameMain extends Canvas implements Runnable{
 				//updates = 0;
 			}
 		}
+		gameLogger.log(Level.INFO, "Cerrado el juego");
 		stop();
 		
 	}//aqui se hacen los cï¿½lculos cada segundo
@@ -95,7 +106,7 @@ public abstract class GameMain extends Canvas implements Runnable{
 		g.fillRect(0, 0, 1000, 600);
 		
 		
-		String s = Integer.toString(getScore());
+		String s = Float.toString(getScore());
 		g.setColor(Color.WHITE);
 		
 		
@@ -132,10 +143,16 @@ public abstract class GameMain extends Canvas implements Runnable{
 	public void setHandler(GameHandler handler) {
 		this.handler = handler;
 	}
-	public static int getScore() {
+	public static float getScore() {
 		return score;
 	}
-	public static void setScore(int score) {
+	public static void setScore(float score) {
 		GameMain.score = score;
+	}
+	public static Logger getGameLogger() {
+		return gameLogger;
+	}
+	public static void setGameLogger(Logger gamelogger) {
+		GameMain.gameLogger = gamelogger;
 	}			
 }

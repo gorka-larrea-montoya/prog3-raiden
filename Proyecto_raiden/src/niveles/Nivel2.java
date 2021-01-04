@@ -89,7 +89,7 @@ public class Nivel2 extends GameMain {
 			File file = new File(saveDataPath, fileName);
 			FileWriter output = new FileWriter(file);
 			BufferedWriter writer = new BufferedWriter(output);
-			writer.write(getScore());;
+			writer.write((int) getScore());;
 			writer.close();
 			//
 		}catch(Exception e) {
