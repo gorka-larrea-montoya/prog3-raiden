@@ -38,10 +38,7 @@ public abstract class GameMain extends Canvas implements Runnable{
 		
 	}
 	public void run() { 
-		
-		
-		System.out.println("hola?");
-		
+				
 		this.requestFocus();
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 60.0;

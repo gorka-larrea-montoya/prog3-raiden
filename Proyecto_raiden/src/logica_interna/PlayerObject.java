@@ -157,6 +157,7 @@ public class PlayerObject extends GameObject {
 
 	public void checkHealth() {
 		if (getHealth() <= 0) {
+			
 			handler.removeobject(this);
 		}
 		

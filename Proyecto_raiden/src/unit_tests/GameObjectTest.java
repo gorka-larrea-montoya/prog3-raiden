@@ -30,6 +30,8 @@ public class GameObjectTest {
 		en.tick();
 		assertEquals(47, en.getX());
 		assertEquals(53, en.getY());
+		assertEquals(-3.0, en.getVelX(),0.1);
+		assertEquals(3.0, en.getVelY(),0.1);
 	}
 
 }

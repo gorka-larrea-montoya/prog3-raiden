@@ -1,11 +1,15 @@
 package unit_tests;
 import static org.junit.Assert.*;
 
+import java.util.LinkedList;
+
 import org.junit.Test;
 
 import logica_interna.*;
 public class GameHandlerTest {	
 	GameHandler h = new GameHandler();
+	GameMain gm = new GameMain() {};
+	LinkedList<GameObject> objlist = new LinkedList<GameObject>();
 	@Test
 	public void testTick() {
 		h.addObject(new EnemyBullet(800, 800, h));
@@ -22,6 +26,7 @@ public class GameHandlerTest {
 		h.addObject(a);
 		h.removeobject(a);
 		assertEquals(0, h.getObjectList().size());
+		
 	}
 	
 	@Test
@@ -33,7 +38,22 @@ public class GameHandlerTest {
 		assertEquals(false, h.isUp());
 		assertEquals(true, h.isDown());
 		assertEquals(false, h.isLeft());
-		assertEquals(true, h.isRight());	
+		assertEquals(true, h.isRight());
+		
+		h.setWaveStartTimer(0);
+		h.setWaveStartTimerDiff(10);
+		h.setWaveNumber(3);
+		h.setTicklogger(20);
+		h.setWaveStart(true);
+		h.setGameMain(gm);
+		
+		assertEquals(0, h.getWaveStartTimer());
+		assertEquals(10, h.getWaveStartTimerDiff());
+		assertEquals(3, h.getWaveNumber());
+		assertEquals(20,h.getTicklogger());
+		assertEquals(true, h.isWaveStart());
+		assertEquals(gm, h.getGameMain());
+		
 	}
 	
 	@Test
@@ -47,6 +67,8 @@ public class GameHandlerTest {
 		assertEquals(true, h.isLeft());
 		assertEquals(false, h.isRight());
 		
-	}
+		h.setObjectList(objlist);
+		assertEquals(objlist, h.getObjectList());
+}
 
 }

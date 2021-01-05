@@ -9,11 +9,13 @@ public class Block extends GameObject {
 		this.velY = vely;
 		this.id = ID.Block;
 
+	}public void move() {
+		setX((int) (getX()+velX));
+		setY((int) (getY()+velY));
 	}
 
 	public void tick() {
-		x += velX;
-		y += velY;
+		move();
 	}
 
 	public void render(Graphics g) {

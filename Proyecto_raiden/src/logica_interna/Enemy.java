@@ -38,8 +38,9 @@ public class Enemy extends GameObject{
 	        catch(Exception e){e.printStackTrace();}
 	    }
 	public void move() {
-		x += velX;
-		y += velY;
+				
+		setX((int)getVelX()+getX());
+		setY((int)getVelY()+getY());
 	}
 
 	
