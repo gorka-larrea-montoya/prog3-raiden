@@ -77,7 +77,7 @@ public class Nivel2 extends GameMain {
 		//player.setX(300);
 		//player.setY(300);
 		//player.handler = handler;
-		player = new PlayerObject(300, 300, getHandler(), nomString, 100, 0);
+		player = new PlayerObject(300, 300, getHandler(), nomString, 100, 0,0);
 		
 		getHandler().addObject(player);
 		 
@@ -120,6 +120,7 @@ public class Nivel2 extends GameMain {
 		public void getPlayer() {
 			
 		}
+		
 		
 	/*	public void paint(Graphics g){
 			Font font  = new Font("Serif",Font.BOLD, 36);

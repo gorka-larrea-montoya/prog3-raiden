@@ -46,7 +46,8 @@ public class EnemyBullet extends GameObject{
 					tempPlayer.setHealth(tempPlayer.getHealth() - 25);
 					if(tempPlayer.getHealth() <= 0) {
 						handler.removeobject(tempPlayer);//muere jugador por herida de bala(hp<0)
-						System.out.println(tempPlayer.setHighScore());
+					//	System.out.println(tempPlayer.setHighScore());
+						System.out.println(tempPlayer.PartidaToString());
 					}
 					//System.out.println("HP: " + tempPlayer.getHealth());
 				}	

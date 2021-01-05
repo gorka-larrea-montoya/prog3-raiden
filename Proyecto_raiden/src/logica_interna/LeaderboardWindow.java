@@ -11,6 +11,7 @@ import niveles.VentanaPrincipal;
 public class LeaderboardWindow extends JFrame{
 	JPanel panel = new JPanel();
 	public LeaderboardWindow() {
+		
 	
 		setLayout(new FlowLayout());
 		panel.add(VentanaPrincipal.leadboardTable);

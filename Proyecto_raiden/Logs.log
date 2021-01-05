@@ -1,166 +1,48 @@
-ene. 04, 2021 10:25:43 P. M. logica_interna.GameMain run
+ene. 05, 2021 6:48:20 P.Â M. logica_interna.GameMain run
 INFO: Programa comenzado
-ene. 04, 2021 10:25:43 P. M. java.awt.Container mixOnValidating
-FINE: this = javax.swing.JFrame[frame0,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
-ene. 04, 2021 10:25:43 P. M. java.awt.Container recursiveApplyCurrentShape
-FINE: this = javax.swing.JFrame[frame0,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]; fromZ=0; toZ=0
-ene. 04, 2021 10:25:43 P. M. java.awt.Container recursiveApplyCurrentShape
-FINE: this = javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=]; fromZ=0; toZ=1
-ene. 04, 2021 10:25:43 P. M. java.awt.Container recursiveApplyCurrentShape
-FINE: this = javax.swing.JLayeredPane[null.layeredPane,0,0,984x561,alignmentX=0.0,alignmentY=0.0,border=,flags=0,maximumSize=,minimumSize=,preferredSize=,optimizedDrawingPossible=true]; fromZ=0; toZ=0
-ene. 04, 2021 10:25:43 P. M. java.awt.Container recursiveApplyCurrentShape
-FINE: this = javax.swing.JPanel[null.contentPane,0,0,984x561,layout=javax.swing.JRootPane$1,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]; fromZ=0; toZ=0
-ene. 04, 2021 10:25:43 P. M. java.awt.Component applyCurrentShape
-FINE: this = niveles.Nivel2[canvas0,0,0,984x561]
-ene. 04, 2021 10:25:43 P. M. java.awt.Component calculateCurrentShape
-FINE: this = niveles.Nivel2[canvas0,0,0,984x561]; normalShape=Region[[8, 31 => 992, 592]]
-ene. 04, 2021 10:25:43 P. M. java.awt.Component calculateCurrentShape
-FINE: currentShape=Region[[8, 31 => 992, 592]]
-ene. 04, 2021 10:25:43 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: sun.awt.TimedWindowEvent[WINDOW_LOST_FOCUS,opposite=javax.swing.JFrame[frame0,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame1
-ene. 04, 2021 10:25:43 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: Active niveles.VentanaPrincipal[frame1,0,0,800x500,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x461,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], Current focused niveles.VentanaPrincipal[frame1,0,0,800x500,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x461,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], losing focus niveles.VentanaPrincipal[frame1,0,0,800x500,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x461,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true] opposite javax.swing.JFrame[frame0,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
-ene. 04, 2021 10:25:43 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: java.awt.event.FocusEvent[FOCUS_LOST,temporary,opposite=niveles.Nivel2[canvas0,0,0,984x561],cause=ACTIVATION] on javax.swing.JButton[,196,0,196x26,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@153af9a4,flags=296,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Nivel 2,defaultCapable=true]
-ene. 04, 2021 10:25:43 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: sun.awt.TimedWindowEvent[WINDOW_GAINED_FOCUS,opposite=niveles.VentanaPrincipal[frame1,0,0,800x500,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x461,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame0
-ene. 04, 2021 10:25:43 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: java.awt.event.WindowEvent[WINDOW_ACTIVATED,opposite=niveles.VentanaPrincipal[frame1,0,0,800x500,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,784x461,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame0
-ene. 04, 2021 10:25:43 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: java.awt.event.WindowEvent[WINDOW_DEACTIVATED,opposite=javax.swing.JFrame[frame0,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame1
-ene. 04, 2021 10:25:43 P. M. java.awt.Container mixOnValidating
-FINE: this = javax.swing.JFrame[frame0,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
-ene. 04, 2021 10:25:43 P. M. java.awt.Container recursiveApplyCurrentShape
-FINE: this = javax.swing.JFrame[frame0,180,64,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]; fromZ=0; toZ=0
-ene. 04, 2021 10:25:43 P. M. java.awt.Container recursiveApplyCurrentShape
-FINE: this = javax.swing.JRootPane[,8,31,984x561,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=]; fromZ=0; toZ=1
-ene. 04, 2021 10:25:43 P. M. java.awt.Container recursiveApplyCurrentShape
-FINE: this = javax.swing.JLayeredPane[null.layeredPane,0,0,984x561,alignmentX=0.0,alignmentY=0.0,border=,flags=0,maximumSize=,minimumSize=,preferredSize=,optimizedDrawingPossible=true]; fromZ=0; toZ=0
-ene. 04, 2021 10:25:43 P. M. java.awt.Container recursiveApplyCurrentShape
-FINE: this = javax.swing.JPanel[null.contentPane,0,0,984x561,layout=javax.swing.JRootPane$1,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]; fromZ=0; toZ=0
-ene. 04, 2021 10:25:43 P. M. java.awt.Component applyCurrentShape
-FINE: this = niveles.Nivel2[canvas0,0,0,984x561]
-ene. 04, 2021 10:25:43 P. M. java.awt.Component calculateCurrentShape
-FINE: this = niveles.Nivel2[canvas0,0,0,984x561]; normalShape=Region[[8, 31 => 992, 592]]
-ene. 04, 2021 10:25:43 P. M. java.awt.Component calculateCurrentShape
-FINE: currentShape=Region[[8, 31 => 992, 592]]
-ene. 04, 2021 10:25:43 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: java.awt.event.WindowEvent[WINDOW_OPENED,opposite=null,oldState=0,newState=0] on frame0
-ene. 04, 2021 10:25:43 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+ene. 05, 2021 6:48:20 P.Â M. java.awt.Container mixOnValidating
+FINE: this = javax.swing.JFrame[frame1,140,92,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,1000x578,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+ene. 05, 2021 6:48:21 P.Â M. java.awt.Container recursiveApplyCurrentShape
+FINE: this = javax.swing.JFrame[frame1,140,92,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,1000x578,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]; fromZ=0; toZ=0
+ene. 05, 2021 6:48:21 P.Â M. java.awt.Container recursiveApplyCurrentShape
+FINE: this = javax.swing.JRootPane[,0,22,1000x578,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=]; fromZ=0; toZ=1
+ene. 05, 2021 6:48:21 P.Â M. java.awt.Container recursiveApplyCurrentShape
+FINE: this = javax.swing.JLayeredPane[null.layeredPane,0,0,1000x578,alignmentX=0.0,alignmentY=0.0,border=,flags=0,maximumSize=,minimumSize=,preferredSize=,optimizedDrawingPossible=true]; fromZ=0; toZ=0
+ene. 05, 2021 6:48:21 P.Â M. java.awt.Container recursiveApplyCurrentShape
+FINE: this = javax.swing.JPanel[null.contentPane,0,0,1000x578,layout=javax.swing.JRootPane$1,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]; fromZ=0; toZ=0
+ene. 05, 2021 6:48:21 P.Â M. java.awt.Component applyCurrentShape
+FINE: this = niveles.Nivel2[canvas0,0,0,1000x578]
+ene. 05, 2021 6:48:21 P.Â M. java.awt.Component calculateCurrentShape
+FINE: this = niveles.Nivel2[canvas0,0,0,1000x578]; normalShape=Region[[0, 22 => 1000, 600]]
+ene. 05, 2021 6:48:21 P.Â M. java.awt.Component calculateCurrentShape
+FINE: currentShape=Region[[0, 22 => 1000, 600]]
+ene. 05, 2021 6:48:21 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.WindowEvent[WINDOW_OPENED,opposite=null,oldState=0,newState=0] on frame1
+ene. 05, 2021 6:48:21 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: sun.awt.TimedWindowEvent[WINDOW_GAINED_FOCUS,opposite=null,oldState=0,newState=0] on frame1
+ene. 05, 2021 6:48:21 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.WindowEvent[WINDOW_LOST_FOCUS,opposite=javax.swing.JFrame[frame1,140,92,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,1000x578,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame0
+ene. 05, 2021 6:48:21 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: Active niveles.VentanaPrincipal[frame0,0,23,800x500,invalid,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,800x478,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], Current focused niveles.VentanaPrincipal[frame0,0,23,800x500,invalid,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,800x478,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], losing focus niveles.VentanaPrincipal[frame0,0,23,800x500,invalid,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,800x478,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true] opposite javax.swing.JFrame[frame1,140,92,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,1000x578,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+ene. 05, 2021 6:48:21 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.FocusEvent[FOCUS_LOST,temporary,opposite=niveles.Nivel2[canvas0,0,0,1000x578],cause=ACTIVATION] on javax.swing.JButton[,200,0,200x29,alignmentX=0.0,alignmentY=0.5,border=com.apple.laf.AquaButtonBorder$Dynamic@1b47d77f,flags=288,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=0,left=2,bottom=0,right=2],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=false,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Nivel 2,defaultCapable=true]
+ene. 05, 2021 6:48:21 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.WindowEvent[WINDOW_ACTIVATED,opposite=niveles.VentanaPrincipal[frame0,0,23,800x500,invalid,layout=java.awt.BorderLayout,title=Raiden_Reborn,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,800x478,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame1
+ene. 05, 2021 6:48:21 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.WindowEvent[WINDOW_DEACTIVATED,opposite=javax.swing.JFrame[frame1,140,92,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,1000x578,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame0
+ene. 05, 2021 6:48:21 P.Â M. sun.lwawt.LWWindowPeer requestWindowFocus
+FINE: requesting native focus to sun.lwawt.LWWindowPeer@1714183a [target is javax.swing.JFrame[frame1,140,92,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,1000x578,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]]
+ene. 05, 2021 6:48:21 P.Â M. sun.lwawt.LWWindowPeer changeFocusedWindow
+FINE: gaining focus window: sun.lwawt.LWWindowPeer@1714183a [target is javax.swing.JFrame[frame1,140,92,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,1000x578,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]]
+ene. 05, 2021 6:48:22 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: sun.awt.TimedWindowEvent[WINDOW_GAINED_FOCUS,opposite=javax.swing.JFrame[frame1,140,92,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,1000x578,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame1
+ene. 05, 2021 6:48:22 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
 FINE: java.awt.event.FocusEvent[FOCUS_GAINED,permanent,opposite=null,cause=ACTIVATION] on canvas0
-ene. 04, 2021 10:25:43 P. M. sun.awt.im.InputContext activateInputMethod
-FINE: Current client component niveles.Nivel2[canvas0,0,0,984x561]
-ene. 04, 2021 10:25:49 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@67daecfc
-ene. 04, 2021 10:25:49 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@2279d1f6
-ene. 04, 2021 10:25:49 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@35b28f1f
-ene. 04, 2021 10:25:51 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@12361cbf
-ene. 04, 2021 10:25:51 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@1b29bbe6
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@7082553b
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@65a136d7
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@43e655d0
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@5da45f15
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@6e9cb13f
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@aa7376c
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@47ef3a2b
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@62a4688e
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@47413e9b
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@18641111
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@1a10b97c
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@5989c455
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@205c2dec
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@4264c1d0
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@1b04e66b
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@cb82232
-ene. 04, 2021 10:25:52 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@4796ae94
-ene. 04, 2021 10:25:53 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@14d13dc8
-ene. 04, 2021 10:25:53 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@1c80fdb7
-ene. 04, 2021 10:25:53 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@374a4e19
-ene. 04, 2021 10:25:53 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@2ba0c2a6
-ene. 04, 2021 10:25:53 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@146c973c
-ene. 04, 2021 10:25:53 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@2314661d
-ene. 04, 2021 10:25:53 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@61fe9112
-ene. 04, 2021 10:25:53 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@53cb8e61
-ene. 04, 2021 10:25:53 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@553f08af
-ene. 04, 2021 10:25:53 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@2d3e9e7e
-ene. 04, 2021 10:25:54 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@1bed3093
-ene. 04, 2021 10:25:54 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@3e078121
-ene. 04, 2021 10:25:54 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@1617b4d7
-ene. 04, 2021 10:25:54 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@d27183a
-ene. 04, 2021 10:25:54 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@3bee1dba
-ene. 04, 2021 10:25:54 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@19a4a1f
-ene. 04, 2021 10:25:54 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@266ed81f
-ene. 04, 2021 10:25:54 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@412b1030
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@764f2a49
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@3bb6c9c8
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@616be51d
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@627698cf
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@541ae061
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@6bc6ef4c
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@553bac24
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@35de6ac
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@47174e
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@5ca72485
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@2e38f53d
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@d8f588
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@429b7106
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@2169dca6
-ene. 04, 2021 10:25:55 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@f6b2d7a
-ene. 04, 2021 10:25:56 P. M. logica_interna.GameHandler tick
-SEVERE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@23f5fe29
-ene. 04, 2021 10:25:56 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
-FINE: sun.awt.TimedWindowEvent[WINDOW_CLOSING,opposite=null,oldState=0,newState=0] on frame0
+ene. 05, 2021 6:48:22 P.Â M. sun.awt.im.InputContext activateInputMethod
+FINE: Current client component niveles.Nivel2[canvas0,0,0,1000x578]
+ene. 05, 2021 6:48:22 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: sun.awt.TimedWindowEvent[WINDOW_GAINED_FOCUS,opposite=javax.swing.JFrame[frame1,140,92,1000x600,layout=java.awt.BorderLayout,title=JuegoEjemplo,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,1000x578,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true],oldState=0,newState=0] on frame1
+ene. 05, 2021 6:48:25 P.Â M. logica_interna.GameHandler tick
+FINE: BORRADO OBJETO QUE SE SALIA DEL BORDElogica_interna.EnemyBullet@1ffaea59
+ene. 05, 2021 6:48:27 P.Â M. java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.WindowEvent[WINDOW_CLOSING,opposite=null,oldState=0,newState=0] on frame1

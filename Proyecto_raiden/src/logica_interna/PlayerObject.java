@@ -8,6 +8,8 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Date;
+import java.util.LinkedList;
 
 import javax.imageio.ImageIO;
 public class PlayerObject extends GameObject {
@@ -16,7 +18,8 @@ public class PlayerObject extends GameObject {
 	String name;
 	int health;
 	int speed;
-	int score;
+	int score = 0;
+	int killCount = 0;
 
 
 	Mejoras mejoraActual = Mejoras.ESTANDAR;
@@ -25,7 +28,7 @@ public class PlayerObject extends GameObject {
 	//String playerPath = "resources/player.png";
 //	Image plyr = this.getClass().getResource(playerPath);
 
-	public PlayerObject(int x, int y, GameHandler handler, String name,int health, int score) {
+	public PlayerObject(int x, int y, GameHandler handler, String name,int health, int score, int killCount) {
 		super(x, y);
 		this.handler = handler;
 		this.name = name;
@@ -33,7 +36,8 @@ public class PlayerObject extends GameObject {
 		this.speed = (int) 4 ;
 		this.id = ID.Player;
 		this.mejoraActual = getMejoraActual();
-		this.score = 0;
+		this.score = score;
+		this.killCount = killCount;
 		
 	    try{
 	    	 playerImage = ImageIO.read(new File("./resources/player2.png"));
@@ -57,7 +61,26 @@ public class PlayerObject extends GameObject {
 	//public void PlayerObjectSetName(String name) {
 	//	this.name = VentanaPrincipal.sendName(playerName);
 		
+	/*public PlayerObject PlayerObjectTabla(String name, int score, int enemiesKilled, String date){
+	new PlayerO;
+	this.score = this.
+		return PlayerObjectTabla(name, score, enemiesKilled, date);
+	};*/
+	public PlayerObject(int killCount) {
+	this.name = name;
+	this.score = score;
+	this.killCount = killCount;
+		
+	};
 	
+	public int getKillCount() {
+		return killCount;
+	}
+
+	public void setKillCount(int killCount) {
+		this.killCount = killCount;
+	}
+
 	public PlayerObject(String name, int x, int y, GameHandler handler) {
 		super(x, y);
 		this.name = name;
@@ -176,9 +199,20 @@ public class PlayerObject extends GameObject {
 	}
 	
 	
-	public String setHighScore() {
+	public String PartidaToString() {
 		String name =  getName();
 		String score = Float.toString(GameMain.getScore());
-		return name + ","+ score;
+		return (name + "," + (int) GameMain.getScore() + "," + (int) GameMain.getEnemiesKilledMain() + "," + GameMain.getDateString());
 	}
+	
+	String s = this.PartidaToString();
+	
+	String[] tablaDatosFila = s.split(",");
+	String nombreTable = tablaDatosFila[0];
+	String scoreTable = tablaDatosFila[1];
+	String enemiesKilledTable = tablaDatosFila[2];
+	String dateTable = tablaDatosFila[3];
+	
+	PlayerObjectTabla pTabla = new PlayerObjectTabla(nombreTable, scoreTable, enemiesKilledTable, dateTable);
+	
 }

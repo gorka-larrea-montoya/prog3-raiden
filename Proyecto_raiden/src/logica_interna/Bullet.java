@@ -10,10 +10,12 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import niveles.VentanaPrincipal;
+
 public class Bullet extends GameObject{
 	GameHandler handler;
 	BufferedImage bulletImage;
-	static PlayerObject p;
+//	static PlayerObject p =VentanaPrincipal.readyPlayer();
 	//TODO arreglar que las balas necesiten del ID de bala
 
 	public Bullet(int x, int y,GameHandler handler) {
@@ -46,8 +48,10 @@ public class Bullet extends GameObject{
 				if(getRectangle().intersects(tempEnemy.getRectangle())){
 					handler.removeobject(this);
 					handler.removeobject(tempEnemy);
+				//	p.setKillCount(p.getKillCount() +1);
 					GameMain.setScore(GameMain.getScore() + 5);
-					System.out.println(GameMain.getScore());
+					GameMain.setEnemiesKilledMain(GameMain.getEnemiesKilledMain() +1);
+					System.out.println(GameMain.getScore() + " " + GameMain.getEnemiesKilledMain());
 				//	p.killedEnemy(); sumar puntos aqui? o que sea una funcion de esto + tiempo
 				}
 			}

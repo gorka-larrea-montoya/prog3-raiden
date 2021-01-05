@@ -108,6 +108,10 @@ public class VentanaPrincipal extends JFrame{
 			}
 		});
         
+      //  public PlayerObject readyPlayer(new Pl) {
+     //   	return;
+     //   };
+        
 
 		
 		JButton botonAjustes = new JButton("Ajustes");

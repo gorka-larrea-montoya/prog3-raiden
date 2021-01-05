@@ -2,6 +2,7 @@ package logica_interna;
 import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
+import java.util.LinkedList;
 import java.util.logging.*;
 
 
@@ -9,6 +10,8 @@ public abstract class GameMain extends Canvas implements Runnable{
 
 	static final long serialVersionUID = 517368560782680288L;
 	private static float score = 0;
+	private static float enemiesKilledMain = 0;
+	
 	boolean isRunning = false;
 	Thread gameThread;
 	private Color colortest;
@@ -16,9 +19,13 @@ public abstract class GameMain extends Canvas implements Runnable{
 	int contadorGuion;
 	private static Logger gameLogger = Logger.getLogger(GameMain.class.getName());
 	
+	static long millis = System.currentTimeMillis();
+	static java.sql.Date datte = new java.sql.Date(millis);
+	static String dateString = datte.toString();
+	
 	
 
-
+	
 	protected void start(){
 		isRunning = true;
 		gameThread = new Thread(this);
@@ -50,7 +57,7 @@ public abstract class GameMain extends Canvas implements Runnable{
 		try(FileInputStream fis = new FileInputStream("logs/GameLog.properties")) {
 			LogManager.getLogManager().readConfiguration(fis);
 		} catch (Exception e) {
-			gameLogger.log(Level.SEVERE, "No se ha podido leer el fichero de configuración del logger");
+			gameLogger.log(Level.SEVERE, "No se ha podido leer el fichero de configuraciï¿½n del logger");
 		}
 		gameLogger.log(Level.INFO, "Programa comenzado");
 		while (isRunning) {
@@ -151,5 +158,21 @@ public abstract class GameMain extends Canvas implements Runnable{
 	}
 	public static void setGameLogger(Logger gamelogger) {
 		GameMain.gameLogger = gamelogger;
+	}
+	public static float getEnemiesKilledMain() {
+		return enemiesKilledMain;
+	}
+	public static void setEnemiesKilledMain(float enemiesKilledMain) {
+		GameMain.enemiesKilledMain = enemiesKilledMain;
 	}			
+	//public String fechaPartida() {
+	//	return this.dateString;
+	//}
+	public static String getDateString() {
+		return dateString;
+	}
+	public void setDateString(String dateString) {
+		this.dateString = dateString;
+	};
+	
 }
