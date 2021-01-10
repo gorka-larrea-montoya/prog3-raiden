@@ -127,11 +127,17 @@ public class PlayerObject extends GameObject {
 	public void setMejoraActual(Mejoras mejoraActual) {
 		this.mejoraActual = mejoraActual;
 	}public void move() {
-		x += velX;
-		y += velY;
+		if (((x + velX) > 0)&&(x+velX)<(1000-32)) {
+			x += velX;
+		}
+		if (((y + velY) > 0)&&(y+velY)<(600-32)) {
+			y += velY;
+		}
+		handler.handlerlog(Level.INFO, "El PlayerObject se ha movido a "+x+","+y  );
 	}
 	public void tick() {
-				colision();
+		move();
+		colision();
 		//tiene el fallo de que al pulsar direcciones opuestas lo resuelve con la que tiene la linea escrita mas tarde. Habria que reescribir mucho para arreglarlo
 		if (handler.isDown()) {	velY =+ speed;}else if (!handler.isUp()) {velY = 0;}
 		if (handler.isUp()) {velY =- speed;}else if (!handler.isDown()) {velY = 0;}
