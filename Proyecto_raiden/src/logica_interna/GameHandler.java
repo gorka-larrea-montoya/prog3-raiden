@@ -19,6 +19,7 @@ public class GameHandler {
 
 	
 	public void tick() {
+		ticklogger++;
 		//sorprendentemente las balas hay que tratarlas en esta clase y no en bullet 
 		for (int i = 0; i < objectList.size(); i++) {
 			objectList.get(i).tick();
@@ -36,7 +37,9 @@ public class GameHandler {
 			
 		}
 	}
-	
+	public void handlerlog(Level level, String mensaje) {
+		getGameMain().getGameLogger().log(level,"Tick " + ticklogger + " :" + mensaje);
+	}
 	
 	
 	public void addObject(GameObject a) {

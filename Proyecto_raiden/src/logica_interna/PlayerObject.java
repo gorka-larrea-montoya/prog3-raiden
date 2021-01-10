@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.Date;
 import java.util.LinkedList;
+import java.util.logging.Level;
 
 import javax.imageio.ImageIO;
 public class PlayerObject extends GameObject {
@@ -41,6 +42,7 @@ public class PlayerObject extends GameObject {
 		
 	    try{
 	    	 playerImage = ImageIO.read(new File("./resources/player2.png"));
+	    	 handler.handlerlog(Level.INFO,"Se ha cargado la imagen player2 para el objeto ");
 	        }catch(IOException e){
 	        	e.printStackTrace();}
 	        catch(Exception e){e.printStackTrace();}
@@ -124,12 +126,13 @@ public class PlayerObject extends GameObject {
 	}
 	public void setMejoraActual(Mejoras mejoraActual) {
 		this.mejoraActual = mejoraActual;
-	}
-	public void tick() {
+	}public void move() {
 		x += velX;
 		y += velY;
-		colision();
-		//tiene el fallo de que al pulsar direcciones opuestas lo resuelve con la que tiene la linea escrita mas tarde. Habr�a que reescribir mucho para arreglarlo
+	}
+	public void tick() {
+				colision();
+		//tiene el fallo de que al pulsar direcciones opuestas lo resuelve con la que tiene la linea escrita mas tarde. Habria que reescribir mucho para arreglarlo
 		if (handler.isDown()) {	velY =+ speed;}else if (!handler.isUp()) {velY = 0;}
 		if (handler.isUp()) {velY =- speed;}else if (!handler.isDown()) {velY = 0;}
 		if (handler.isLeft()) {velX =- speed;}else if (!handler.isRight()) {velX = 0;}

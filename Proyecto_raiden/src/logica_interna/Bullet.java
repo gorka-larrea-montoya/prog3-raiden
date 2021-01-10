@@ -7,6 +7,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Level;
 
 import javax.imageio.ImageIO;
 
@@ -22,16 +23,23 @@ public class Bullet extends GameObject{
 		super(x, y);
 		this.handler = handler;
 		this.id = ID.Bullet;
+		
 		try{
-	    bulletImage = ImageIO.read(new File("./resources/bullet3.png"));
-	    }catch(IOException e){
-	    e.printStackTrace();}
-		catch(Exception e){e.printStackTrace();}
+			bulletImage = ImageIO.read(new File("./resources/bullet3.png"));
+			handler.handlerlog(Level.INFO, "Cargada imagen bullet3 de la clase Bullet");
+		}catch(IOException e){
+			handler.handlerlog(Level.SEVERE, "Error de IO al cargar la imagen Bullet3 de la clase bullet" + e.getStackTrace());
+		}
+		catch(Exception e){
+			handler.handlerlog(Level.SEVERE, "Error de Java al cargar la imagen Bullet3 de la clase bullet" + e.getStackTrace());
+		}
 	}
-	
-	public void tick() {
+	public void move() {
 		x += velX;
 		y += -6;
+	}
+	public void tick() {
+		move();
 		colision();
 		
 		
@@ -51,7 +59,7 @@ public class Bullet extends GameObject{
 				//	p.setKillCount(p.getKillCount() +1);
 					GameMain.setScore(GameMain.getScore() + 5);
 					GameMain.setEnemiesKilledMain(GameMain.getEnemiesKilledMain() +1);
-					System.out.println(GameMain.getScore() + " " + GameMain.getEnemiesKilledMain());
+					handler.handlerlog(Level.INFO,GameMain.getScore() + " " + GameMain.getEnemiesKilledMain());
 				//	p.killedEnemy(); sumar puntos aqui? o que sea una funcion de esto + tiempo
 				}
 			}

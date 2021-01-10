@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.Random;
+import java.util.logging.Level;
 
 import javax.imageio.ImageIO;
 
@@ -30,15 +31,16 @@ public class Enemy extends GameObject{
 		this.health = 40;
 		this.id = ID.Enemy;
 		this.handler = handler;
-		
+		handler.handlerlog(Level.INFO, "Se ha creado un objeto Enemy en X,Y: " + x +","+ y + "con velocidad: "+ velX+","+velY);
 		 try{
 			 enemyImage = ImageIO.read(new File("./resources/enemy1.png"));
+			 handler.handlerlog(Level.INFO, "Se ha cargado la imagen enemy1 para la clase Enemy");
 	        }catch(IOException e){
 	        	e.printStackTrace();}
 	        catch(Exception e){e.printStackTrace();}
 	    }
 	public void move() {
-				
+		handler.handlerlog(Level.INFO, "El Enemy que estaba en"+ x + ","+ y +"se mueve a " + ((int)getVelX()+getX())+","+((int)getVelY()+getY()));
 		setX((int)getVelX()+getX());
 		setY((int)getVelY()+getY());
 	}
@@ -53,6 +55,7 @@ public class Enemy extends GameObject{
 		if(choose == 0) {
 			velX = (r.nextInt(1));
 			shoot(this);
+			handler.handlerlog(Level.FINE, "Enemy ha tirado shoot(this) en "+x+","+y);
 			//velY = velY + (float)0.07;
 		}
 		
