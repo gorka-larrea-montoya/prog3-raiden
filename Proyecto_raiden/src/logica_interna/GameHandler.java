@@ -21,12 +21,16 @@ public class GameHandler {
 	public void tick() {
 		ticklogger++;
 		//sorprendentemente las balas hay que tratarlas en esta clase y no en bullet 
-		for (int i = 0; i < objectList.size(); i++) {
-			objectList.get(i).tick();
-		}for (int i = 0; i < objectList.size(); i++) {
-			if(objectList.get(i).getY() > 700) {
-				GameMain.getGameLogger().log(Level.FINE,"BORRADO OBJETO QUE SE SALIA DEL BORDE"+ objectList.get(i).toString());
-				objectList.remove(objectList.get(i));
+		if (objectList.size()>0) {
+
+
+			for (int i = 0; i < objectList.size(); i++) {
+				objectList.get(i).tick();
+			}for (int i = 0; i < objectList.size(); i++) {
+				if(objectList.get(i).getY() > 700) {
+					GameMain.getGameLogger().log(Level.FINE,"BORRADO OBJETO QUE SE SALIA DEL BORDE"+ objectList.get(i).toString());
+					objectList.remove(objectList.get(i));
+				}
 			}
 		}
 	}
