@@ -15,7 +15,7 @@ public class EnemyBullet extends GameObject{
 	Enemy enemy;
 	BufferedImage enemyBulletImage;
 
-	public EnemyBullet(int x, int y,GameHandler handler) {
+	public EnemyBullet(float x, float y,GameHandler handler) {
 		super(x, y);
 		this.handler = handler;
 		this.id = ID.EnemyBullet;
@@ -30,9 +30,12 @@ public class EnemyBullet extends GameObject{
 			e.printStackTrace();
 		}
 	}
-	public void tick() {
+	public void move() {
 		x += velX;
 		y += +2;
+	}
+	public void tick() {
+		move();
 		colision();
 	}
 
@@ -66,7 +69,7 @@ public class EnemyBullet extends GameObject{
 
 	}
 	public Rectangle getRectangle() {
-		return new Rectangle(x+15,y,5,12);
+		return new Rectangle((int)x+15,(int)y,5,12);
 	}
 	@Override
 	public void paint(Graphics2D g2) {

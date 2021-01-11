@@ -6,24 +6,25 @@ import java.awt.Rectangle;
 
 public class MejoraDoble extends GameObject{
 	
-	public MejoraDoble(int x, int y, float velx, float vely) {
+	public MejoraDoble(float x, float y, float velx, float vely) {
 		super(x, y);
 		this.velX = velx;
 		this.velY = vely;
 		this.id = ID.PowerUp;
 
 	}
-
-	@Override
-	public void tick() {
+	public void move() {
 		x += velX;
 		y += velY;
-		
+	}
+	@Override
+	public void tick() {
+		move();
 	}
 
 	@Override
 	public void render(Graphics g) {
-		g.fillRect(x, y, 22, 22);
+		g.fillRect((int)x,(int)y, 22, 22);
 		g.setColor(Color.magenta);
 		
 	}

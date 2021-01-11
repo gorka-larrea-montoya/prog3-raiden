@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class Block extends GameObject {
 //NO USAR MAS POR AHORA
-	public Block(int x, int y,float velx,float vely,ID id) {
+	public Block(float x, float y,float velx,float vely,ID id) {
 		super(x,y);
 		this.velX = velx;
 		this.velY = vely;
@@ -20,12 +20,12 @@ public class Block extends GameObject {
 
 	public void render(Graphics g) {
 		g.setColor(Color.blue);
-		g.fillRect(x, y, 32, 32);
+		g.fillRect((int)x,(int) y, 32, 32);
 		
 	}
 
 	public Rectangle getRectangle() {
-		return new Rectangle(x,y,32,32);
+		return new Rectangle((int)x,(int)y,32,32);
 	}
 
 	@Override

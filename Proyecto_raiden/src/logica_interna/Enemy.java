@@ -22,9 +22,9 @@ public class Enemy extends GameObject{
 	BufferedImage enemyImage;
 	BufferedImage enemyBulletImage;
 	private int health;
+	private int contadorGuion;
 	
-	
-	public Enemy(int x, int y, float velX, float velY, ID id, GameHandler handler) {
+	public Enemy(float x, float y, float velX, float velY, ID id, GameHandler handler) {
 		super(x, y);
 		this.velX = velX;
 		this.velY = velY;
@@ -72,7 +72,7 @@ public class Enemy extends GameObject{
 	@Override
 	public Rectangle getRectangle() {
 		// TODO Auto-generated method stub
-		return new Rectangle(x, y, 32, 32);
+		return new Rectangle((int)x,(int) y, 32, 32);
 	}
 
 	@Override
@@ -81,7 +81,7 @@ public class Enemy extends GameObject{
        at.translate((int)x, (int)y);
       //  at.rotate(Math.PI/2);
        // at.translate(-playerImage.getWidth()/2, -playerImage.getHeight()/2);
-        g2.drawImage(enemyImage, x, y, null);
+        g2.drawImage(enemyImage, (int)x, (int)y, null);
 	}
 	
 	
@@ -104,6 +104,54 @@ public class Enemy extends GameObject{
 	
 	public void shoot(Enemy e) {
 	handler.addObject(new EnemyBullet(e.getX(), e.getY(),handler));
+	}
+	public GameHandler getHandler() {
+		return handler;
+	}
+	public void setHandler(GameHandler handler) {
+		this.handler = handler;
+	}
+	public Random getR() {
+		return r;
+	}
+	public void setR(Random r) {
+		this.r = r;
+	}
+	public int getChoose() {
+		return choose;
+	}
+	public void setChoose(int choose) {
+		this.choose = choose;
+	}
+	public int getHp() {
+		return hp;
+	}
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+	public BufferedImage getEnemyImage() {
+		return enemyImage;
+	}
+	public void setEnemyImage(BufferedImage enemyImage) {
+		this.enemyImage = enemyImage;
+	}
+	public BufferedImage getEnemyBulletImage() {
+		return enemyBulletImage;
+	}
+	public void setEnemyBulletImage(BufferedImage enemyBulletImage) {
+		this.enemyBulletImage = enemyBulletImage;
+	}
+	public int getHealth() {
+		return health;
+	}
+	public void setHealth(int health) {
+		this.health = health;
+	}
+	public int getContadorGuion() {
+		return contadorGuion;
+	}
+	public void setContadorGuion(int contadorGuion) {
+		this.contadorGuion = contadorGuion;
 	}
 	
 	

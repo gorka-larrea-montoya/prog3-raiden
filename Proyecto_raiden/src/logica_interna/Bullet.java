@@ -19,7 +19,7 @@ public class Bullet extends GameObject{
 //	static PlayerObject p =VentanaPrincipal.readyPlayer();
 	//TODO arreglar que las balas necesiten del ID de bala
 
-	public Bullet(int x, int y,GameHandler handler) {
+	public Bullet(float x, float y,GameHandler handler) {
 		super(x, y);
 		this.handler = handler;
 		this.id = ID.Bullet;
@@ -87,7 +87,7 @@ public class Bullet extends GameObject{
 	}
 	
 	public Rectangle getRectangle() {
-		return new Rectangle(x,y,5,22);
+		return new Rectangle((int)x,(int)y,5,22);
 	}
 
 	@Override

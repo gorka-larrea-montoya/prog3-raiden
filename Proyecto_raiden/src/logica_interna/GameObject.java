@@ -2,13 +2,13 @@ package logica_interna;
 import java.awt.*;
 
 public abstract class GameObject {
-	protected int x;
-	protected int y;
+	protected float x;
+	protected float y;
 	protected float velX;
 	protected float velY;
 	protected ID id;
 	
-	public GameObject(int x, int y) {
+	public GameObject(float x, float y) {
 		this.x = x;
 		this.y = y;
 	}
@@ -31,16 +31,16 @@ public abstract class GameObject {
 	public void setId(ID id) {
 		this.id = id;
 	}
-	public int getX() {
+	public float getX() {
 		return x;
 	}
-	public void setX(int x) {
+	public void setX(float x) {
 		this.x = x;
 	}
-	public int getY() {
+	public float getY() {
 		return y;
 	}
-	public void setY(int y) {
+	public void setY(float y) {
 		this.y = y;
 	}
 	public float getVelX() {

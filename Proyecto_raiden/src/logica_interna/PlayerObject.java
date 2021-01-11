@@ -127,10 +127,10 @@ public class PlayerObject extends GameObject {
 	public void setMejoraActual(Mejoras mejoraActual) {
 		this.mejoraActual = mejoraActual;
 	}public void move() {
-		if (((x + velX) > 0)&&(x+velX)<(1000-32)) {
+		if (((x + velX) > 0)&&(x+velX)<(1000-64)) {
 			x += velX;
 		}
-		if (((y + velY) > 0)&&(y+velY)<(600-32)) {
+		if (((y + velY) > 0)&&(y+velY)<(600-64)) {
 			y += velY;
 		}
 		handler.handlerlog(Level.INFO, "El PlayerObject se ha movido a "+x+","+y  );
@@ -182,7 +182,7 @@ public class PlayerObject extends GameObject {
 	
 	 
 	public Rectangle getRectangle() {
-		return new Rectangle(x,y,46,38);
+		return new Rectangle((int)x,(int)y,46,38);
 	}
 
 	
