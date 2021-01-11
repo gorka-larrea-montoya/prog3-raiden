@@ -64,7 +64,7 @@ public class VentanaPrincipal extends JFrame{
 		botonNivel1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new Nivel1();
+				new Nivel1(nombreDelJugador);
 			}
 		});
 		

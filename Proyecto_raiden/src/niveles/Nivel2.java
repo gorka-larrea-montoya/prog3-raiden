@@ -20,15 +20,15 @@ public class Nivel2 extends GameMain {
 	
 	
 	public Nivel2(String nomString){
-		
+		handler = new GameHandler();
 		this.setColortest(new Color(0, 0, 0));
-		new Ventana(1000, 600, "JuegoEjemplo", this);
+		new Ventana(1000, 600, "Nivel 2", this);
 		//this.paint();
 		start();
 		
 		
 		float f = (float) (Math.random() * 1001);
-		setHandler(new GameHandler());
+		setHandler(handler);
 		//handler.addObject(new Block(100,0,0,0,ID.Block));
 		//handler.addObject(new Block(200,0,0,0,ID.Block));
 		
