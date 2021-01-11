@@ -39,11 +39,28 @@ public class Enemy extends GameObject{
 	        	e.printStackTrace();}
 	        catch(Exception e){e.printStackTrace();}
 	    }
-	public void move() {
-		handler.handlerlog(Level.INFO, "El Enemy que estaba en"+ x + ","+ y +"se mueve a " + ((int)getVelX()+getX())+","+((int)getVelY()+getY()));
-		setX((int)getVelX()+getX());
-		setY((int)getVelY()+getY());
-	}
+	public Enemy(float x, double y, double velX, double velY, ID id, GameHandler handler) {
+		super(x, (float) y);
+		this.velX = (float) velX;
+		this.velY = (float) velY;
+		this.health = 40;
+		this.id = ID.Enemy;
+		this.handler = handler;
+		handler.handlerlog(Level.INFO, "Se ha creado un objeto Enemy en X,Y: " + x +","+ y + "con velocidad: "+ velX+","+velY);
+		try{
+			enemyImage = ImageIO.read(new File("./resources/enemy1.png"));
+			handler.handlerlog(Level.INFO, "Se ha cargado la imagen enemy1 para la clase Enemy");
+		}catch(IOException e){
+			e.printStackTrace();}
+		catch(Exception e){e.printStackTrace();}
+	}	
+	
+
+public void move() {
+	handler.handlerlog(Level.INFO, "El Enemy que estaba en"+ x + ","+ y +"se mueve a " + ((int)getVelX()+getX())+","+((int)getVelY()+getY()));
+	setX((int)getVelX()+getX());
+	setY((int)getVelY()+getY());
+}
 
 	
 

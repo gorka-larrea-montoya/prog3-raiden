@@ -33,8 +33,8 @@ public class Nivel2 extends GameMain {
 		//handler.addObject(new Block(200,0,0,0,ID.Block));
 		
 		
-		for(int i = 0; i < 20; i++) {
-			getHandler().addObject(new Enemy(i*35 ,-250 , (int)0.2 -2+1 +1, (int)1.75+ +1 -2 +1, ID.Enemy, getHandler()));
+		for(float i = 0; i < 20; i++) {
+			getHandler().addObject(new Enemy(i*35 ,-250.0 , 0.2, 1.75, ID.Enemy, getHandler()));
 			
 		}
 		
