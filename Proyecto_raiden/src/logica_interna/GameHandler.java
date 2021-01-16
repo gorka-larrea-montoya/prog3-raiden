@@ -44,7 +44,15 @@ public class GameHandler {
 	public void handlerlog(Level level, String mensaje) {
 		getGameMain().getGameLogger().log(level,"Tick " + ticklogger + " :" + mensaje);
 	}
-	
+	public PlayerObject getPlayerObject() {
+		PlayerObject p = new PlayerObject(0);
+		for (GameObject gameObject : objectList) {
+			if (gameObject.getId().equals(ID.Player)) {
+				p = (PlayerObject) gameObject;
+			}
+		}
+		return p;
+	}
 	
 	public void addObject(GameObject a) {
 		objectList.add(a);

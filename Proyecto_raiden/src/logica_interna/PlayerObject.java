@@ -135,6 +135,14 @@ public class PlayerObject extends GameObject {
 		}
 		handler.handlerlog(Level.INFO, "El PlayerObject se ha movido a "+x+","+y  );
 	}
+	public void shoot() {
+		if (this.getMejoraActual() ==  Mejoras.ESTANDAR) {
+			handler.addObject(new Bullet(this.getX()+12,this.getY()-16,handler)); 
+		} else if (this.getMejoraActual() == Mejoras.DOBLE) {
+			handler.addObject(new Bullet(this.getX()+20,this.getY()-16,handler));
+			handler.addObject(new Bullet(this.getX()+4, this.getY()-16,handler));
+		} 
+	}
 	public void tick() {
 		move();
 		colision();
