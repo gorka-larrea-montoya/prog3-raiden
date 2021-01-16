@@ -57,20 +57,21 @@ public class Enemy extends GameObject{
 	
 
 public void move() {
-	handler.handlerlog(Level.INFO, "El Enemy que estaba en"+ x + ","+ y +"se mueve a " + ((int)getVelX()+getX())+","+((int)getVelY()+getY()));
-	setX((int)getVelX()+getX());
-	setY((int)getVelY()+getY());
+
+	setX(getVelX()+getX());
+	setY(getVelY()+getY());
 }
 
 	
 
 	@Override
 	public void tick() {
-		this.move();		
-		choose = r.nextInt(200);
-		
+		this.move();
+		handler.handlerlog(Level.INFO, "El Enemy que estaba en"+ x + ","+ y +"se mueve a " + ((int)getVelX()+getX())+","+((int)getVelY()+getY()));
+		choose = r.nextInt(60);
+	
 		if(choose == 0) {
-			velX = (r.nextInt(1));
+			//velX = (r.nextInt(1));
 			shoot(this);
 			handler.handlerlog(Level.FINE, "Enemy ha tirado shoot(this) en "+x+","+y);
 			//velY = velY + (float)0.07;
