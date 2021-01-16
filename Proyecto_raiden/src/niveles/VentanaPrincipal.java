@@ -25,30 +25,38 @@ public class VentanaPrincipal extends JFrame{
 	DefaultTableModel leadBoardTableModel;
 	JScrollPane leadBoardJScroll;
 	String nombreDelJugador;
+	JPanel panelBotonesInicio;
+	JPanel panelNombre;
+	JLabel lNombre;
+	JTextField nombreField;
+	JButton botonConfirmarNombre;
+	JLabel labelNombreResp;
+	JButton botonNivel1;
+	JButton botonNivel2;
+	JButton botonPuntuaciones;
+	JButton botonAjustes;
 	
-
-
 	public VentanaPrincipal() {
 		setLayout(new BorderLayout());
 		
 		setTitle("Raiden_Reborn");
-		JPanel panelBotonesInicio = new JPanel();
+		panelBotonesInicio = new JPanel();
 		panelBotonesInicio.setLayout(new GridLayout(1,4));
 		
-		JPanel panelNombre = new JPanel();
+		panelNombre = new JPanel();
 		panelNombre.setLayout(new FlowLayout());
 		
-		JLabel lNombre = new JLabel("Nombre: ");
+		lNombre = new JLabel("Nombre: ");
 		lNombre.setSize(50, 20);
 		
-		JTextField nombreField = new JTextField("Jugador 1");
+		nombreField = new JTextField("Jugador 1");
 		
 		//nombreField.setSize(200, 300);
 		
 		
-		JButton botonConfirmarNombre = new JButton("Confirmar");
+		botonConfirmarNombre = new JButton("Confirmar");
 		
-		JLabel labelNombreResp = new JLabel();
+		labelNombreResp = new JLabel();
 		
 
 		
@@ -59,7 +67,7 @@ public class VentanaPrincipal extends JFrame{
 		
 		
 		
-		JButton botonNivel1 = new JButton("Nivel 1");
+		botonNivel1 = new JButton("Nivel 1");
 		botonNivel1.setSize(20, 60);
 		botonNivel1.addActionListener(new ActionListener() {
 			@Override
@@ -68,7 +76,7 @@ public class VentanaPrincipal extends JFrame{
 			}
 		});
 		
-		JButton botonNivel2 = new JButton("Nivel 2");
+		botonNivel2 = new JButton("Nivel 2");
 		botonNivel2.setSize(20, 60);
 		botonNivel2.addActionListener(new ActionListener() {
 			@Override
@@ -114,7 +122,8 @@ public class VentanaPrincipal extends JFrame{
         
 
 		
-		JButton botonAjustes = new JButton("Ajustes");
+		botonAjustes = new JButton("Ajustes");
+		
 		botonAjustes.setSize(20, 60);
 		
 		panelBotonesInicio.add(botonNivel1);

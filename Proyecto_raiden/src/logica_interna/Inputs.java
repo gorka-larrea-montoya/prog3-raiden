@@ -3,39 +3,50 @@ import java.awt.event.*;
 
 public class Inputs extends KeyAdapter {
 	GameHandler handler;
+	int keyEventUp;
+	int keyEventLeft;
+	int keyEventRight;
+	int keyEventDown;
+	int keyEventShoot;
+	
 	
 	public Inputs(GameHandler handler) {
-			this.handler = handler;
+		this.handler = handler;
+		keyEventUp = KeyEvent.VK_W;
+		keyEventLeft = KeyEvent.VK_A;
+		keyEventRight = KeyEvent.VK_D;
+		keyEventDown = KeyEvent.VK_S;
+		keyEventShoot = KeyEvent.VK_SPACE;
+		
 	}
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
-				
+		
+		
+
 		for (int i = 0; i < handler.objectList.size(); i++) {
 			if (handler.objectList.get(i).getId() == ID.Player) {
 				PlayerObject tempPlayer = (PlayerObject) handler.objectList.get(i); 
-				if (key == KeyEvent.VK_W) {
+				if (key == keyEventShoot) {
+					tempPlayer.shoot();	
+				}
+				if (key == keyEventUp) {
 					handler.setUp(true);
 				}
-				if (key == KeyEvent.VK_A) {
+				if (key == keyEventLeft) {
 					handler.setLeft(true);
 				}
-				if (key == KeyEvent.VK_S) {
+				if (key == keyEventDown) {
 					handler.setDown(true);
 				}
-				if (key == KeyEvent.VK_D) {
+				if (key == keyEventRight) {
 					handler.setRight(true);
 				}
-				if (key == KeyEvent.VK_SPACE) {
-					tempPlayer.shoot();	
-					
-					
-					}
-					
-					
-				}
+
 			}
 		}
-	
+	}
+
 	public void keyReleased(KeyEvent e) {
 		int key = e.getKeyCode();
 		

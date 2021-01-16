@@ -34,7 +34,7 @@ public class PlayerObject extends GameObject {
 		this.handler = handler;
 		this.name = name;
 		this.health = 100;
-		this.speed = (int) 4 ;
+		this.speed = (int) 6 ;
 		this.id = ID.Player;
 		this.mejoraActual = getMejoraActual();
 		this.score = score;
