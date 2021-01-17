@@ -36,7 +36,7 @@ public class EnemyBullet extends GameObject{
 	}
 	public void move() {
 		x += velX;
-		y += +6;
+		y += +2;
 	}
 	public void tick() {
 		move();

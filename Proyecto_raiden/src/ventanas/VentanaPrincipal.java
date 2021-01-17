@@ -40,13 +40,8 @@ public class VentanaPrincipal extends JFrame{
 	private static final long serialVersionUID = -7674724656858770912L;
 	protected static final GameHandler handler = null;
 	public static JTable leadboardTable;
-<<<<<<< HEAD
-	DefaultTableModel leadBoardTableModel;
-	private static JScrollPane leadBoardJScroll;
-=======
 	public static DefaultTableModel leadBoardTableModel;
 	public static JScrollPane leadBoardJScroll;
->>>>>>> branch 'master' of https://github.com/gorka-larrea-montoya/prog3-raiden
 	String nombreDelJugador;
 	JPanel panelBotonesInicio;
 	JPanel panelNombre;
@@ -148,25 +143,6 @@ public class VentanaPrincipal extends JFrame{
 		botonPuntuaciones.setFont(fuente);
 		
 
-<<<<<<< HEAD
-        Class[] clases = {String.class, Integer.class};
-        leadBoardTableModel = new DefaultTableModel() {
-            @Override
-            public Class<?> getColumnClass(int columnIndex) {
-                return clases[columnIndex];
-            }
-        };
-        
-        leadboardTable = new JTable(leadBoardTableModel);
-        leadboardTable.setEnabled(false);
-        leadboardTable.setDragEnabled(false);
-        leadboardTable.setColumnSelectionAllowed(false);
-        
-        leadBoardTableModel.addColumn("PLAYER: ");
-        leadBoardTableModel.addColumn("SCORE: ");
-        
-        setLeadBoardJScroll(new JScrollPane(leadboardTable));
-=======
 		 Class[] clases = {String.class, String.class,String.class, String.class};
 	        leadBoardTableModel = new DefaultTableModel() {
 	            @Override
@@ -193,7 +169,6 @@ public class VentanaPrincipal extends JFrame{
 	        
 	        leadBoardJScroll = new JScrollPane(leadboardTable);
 	        
->>>>>>> branch 'master' of https://github.com/gorka-larrea-montoya/prog3-raiden
         botonPuntuaciones.addActionListener(new ActionListener() {
         	
 			@Override
@@ -313,14 +288,4 @@ public class VentanaPrincipal extends JFrame{
     public static void setName(PlayerObject player, String name) {
     	player.setName(name);;
     }
-
-
-	public static JScrollPane getLeadBoardJScroll() {
-		return leadBoardJScroll;
-	}
-
-
-	public void setLeadBoardJScroll(JScrollPane leadBoardJScroll) {
-		this.leadBoardJScroll = leadBoardJScroll;
-	}
 }	//comentario..prueba
