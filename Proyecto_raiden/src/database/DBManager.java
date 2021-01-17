@@ -8,11 +8,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import javax.swing.JOptionPane;
 
+
 import logica_interna.*;
 import niveles.*;
+import ventanas.VentanaPrincipal;
 
 public class DBManager {
 	
@@ -104,10 +107,46 @@ public class DBManager {
 		try {
 			ResultSet rs = pStatement.executeQuery();
 			return rs;
+			
+	
 		} catch (SQLException e) {
 		}
 		return null;
 	}
+	
+	public void buildTable(ResultSet res) {
+		try {
+			ResultSetMetaData metaData= res.getMetaData();
+			
+			// Names of columns
+	        Vector<String> columnNames = new Vector<String>();
+	        int columnCount = metaData.getColumnCount();
+	        for (int i = 1; i <= columnCount; i++) {
+	            columnNames.add(metaData.getColumnName(i));
+	        }
+	        
+	     // Data of the table
+            Vector<Vector<Object>> data = new Vector<Vector<Object>>();
+            while (res.next()) {
+                Vector<Object> vector = new Vector<Object>();
+                for (int i = 1; i <= columnCount; i++) {
+                    vector.add(res.getObject(i));
+                }
+                data.add(vector);
+            }
+            VentanaPrincipal.leadBoardTableModel.setDataVector(data, columnNames);
+            
+            
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	
+
 	
 	public void close() throws DBException {
 		try {

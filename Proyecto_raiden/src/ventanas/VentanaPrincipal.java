@@ -40,8 +40,8 @@ public class VentanaPrincipal extends JFrame{
 	private static final long serialVersionUID = -7674724656858770912L;
 	protected static final GameHandler handler = null;
 	public static JTable leadboardTable;
-	DefaultTableModel leadBoardTableModel;
-	JScrollPane leadBoardJScroll;
+	public static DefaultTableModel leadBoardTableModel;
+	public static JScrollPane leadBoardJScroll;
 	String nombreDelJugador;
 	JPanel panelBotonesInicio;
 	JPanel panelNombre;
@@ -96,7 +96,8 @@ public class VentanaPrincipal extends JFrame{
 		botonConfirmarNombre = new JButton("CONFIRMAR");
 		botonConfirmarNombre.setFont(fuente);
 		botonConfirmarNombre.setBackground(Color.BLACK);
-		botonConfirmarNombre.setForeground(Color.white);
+		//botonConfirmarNombre.setForeground(Color.white);
+		botonConfirmarNombre.setForeground(Color.black);
 		
 		labelNombreResp = new JLabel();
 
@@ -109,7 +110,8 @@ public class VentanaPrincipal extends JFrame{
 		
 		botonNivel1 = new JButton("NIVEL 1");
 		botonNivel1.setBackground(Color.black);
-		botonNivel1.setForeground(Color.white);
+		//botonNivel1.setForeground(Color.white);
+		botonNivel1.setForeground(Color.black);
 		botonNivel1.setFont(fuente);
 		botonNivel1.setSize(20, 60);
 		botonNivel1.addActionListener(new ActionListener() {
@@ -122,7 +124,8 @@ public class VentanaPrincipal extends JFrame{
 		botonNivel2 = new JButton("NIVEL 2");
 		botonNivel2.setSize(20, 60);
 		botonNivel2.setBackground(Color.black);
-		botonNivel2.setForeground(Color.white);
+		//botonNivel2.setForeground(Color.white);
+		botonNivel1.setForeground(Color.black);
 		botonNivel2.setFont(fuente);
 		botonNivel2.addActionListener(new ActionListener() {
 			@Override
@@ -135,27 +138,37 @@ public class VentanaPrincipal extends JFrame{
 		botonPuntuaciones = new JButton("PUNTUACIONES");
 		botonPuntuaciones.setSize(20, 60);
 		botonPuntuaciones.setBackground(Color.black);
-		botonPuntuaciones.setForeground(Color.white);
+		//botonPuntuaciones.setForeground(Color.white);
+		botonPuntuaciones.setForeground(Color.black);
 		botonPuntuaciones.setFont(fuente);
 		
 
-        Class[] clases = {String.class, Integer.class};
-        leadBoardTableModel = new DefaultTableModel() {
-            @Override
-            public Class<?> getColumnClass(int columnIndex) {
-                return clases[columnIndex];
-            }
-        };
-        
-        leadboardTable = new JTable(leadBoardTableModel);
-        leadboardTable.setEnabled(false);
-        leadboardTable.setDragEnabled(false);
-        leadboardTable.setColumnSelectionAllowed(false);
-        
-        leadBoardTableModel.addColumn("PLAYER: ");
-        leadBoardTableModel.addColumn("SCORE: ");
-        
-        leadBoardJScroll = new JScrollPane(leadboardTable);
+		 Class[] clases = {String.class, String.class,String.class, String.class};
+	        leadBoardTableModel = new DefaultTableModel() {
+	            @Override
+	            public Class<?> getColumnClass(int columnIndex) {
+	                return clases[columnIndex];
+	            }
+	            
+	        };
+	       // Object newIdentifiers [] = {"Player: ","Score: ","Kills: ","Date:"};
+	        //leadBoardTableModel.setColumnIdentifiers(clases);
+	       
+	        
+	        leadboardTable = new JTable(leadBoardTableModel);
+	        leadboardTable.setEnabled(false);
+	        leadboardTable.setDragEnabled(false);
+	        leadboardTable.setColumnSelectionAllowed(false);
+	       // leadBoardTableModel.setColumnIdentifiers(newIdentifiers);
+
+	        leadBoardTableModel.addColumn("PLAYER: ");
+	        leadBoardTableModel.addColumn("SCORE: ");
+	        leadBoardTableModel.addColumn("KILLS: ");
+	        leadBoardTableModel.addColumn("DATE: ");
+	        
+	        
+	        leadBoardJScroll = new JScrollPane(leadboardTable);
+	        
         botonPuntuaciones.addActionListener(new ActionListener() {
         	
 			@Override
@@ -163,7 +176,8 @@ public class VentanaPrincipal extends JFrame{
 				//add(leadboardTable);
 				
 				try {
-					databaseManager.fillLeaderboard();
+					//databaseManager.fillLeaderboard();
+					databaseManager.buildTable(databaseManager.fillLeaderboard());
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -186,7 +200,8 @@ public class VentanaPrincipal extends JFrame{
 		
 		botonAjustes = new JButton("AJUSTES");
 		botonAjustes.setBackground(Color.black);
-		botonAjustes.setForeground(Color.white);
+		//botonAjustes.setForeground(Color.white);
+		botonAjustes.setForeground(Color.black);
 		botonAjustes.setFont(fuente);
 		botonAjustes.setSize(20, 60);
 		botonAjustes.addActionListener(new ActionListener() {

@@ -1,6 +1,7 @@
 package niveles;
 
 import java.awt.Color;
+import java.awt.Window;
 import java.util.logging.Level;
 
 import logica_interna.*;
@@ -60,5 +61,10 @@ public class Nivel1 extends GameMain{
 				}
 			});
 		}
+	}
+	
+	public void close() {
+		this.getParent().disable();
+
 	}
 }
