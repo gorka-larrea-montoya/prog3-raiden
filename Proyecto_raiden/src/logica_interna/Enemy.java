@@ -56,7 +56,7 @@ public class Enemy extends GameObject{
 	}	
 	
 public void takeDamage() {
-	health--;
+	health = health - 50;
 	if (health == 0) {
 		handler.removeobject(this);
 	}

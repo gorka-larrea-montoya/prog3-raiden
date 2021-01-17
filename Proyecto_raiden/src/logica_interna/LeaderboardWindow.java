@@ -12,7 +12,7 @@ public class LeaderboardWindow extends JFrame{
 		
 	
 		setLayout(new FlowLayout());
-		panel.add(VentanaPrincipal.getLeadBoardJScroll());
+		panel.add(VentanaPrincipal.leadBoardJScroll);
 		this.add(panel);
 		this.setVisible(true);
 		setSize(800,500);

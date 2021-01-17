@@ -15,8 +15,8 @@ public abstract class GameMain extends Canvas implements Runnable{
 	boolean isRunning = false;
 	Thread gameThread;
 	private Color colortest;
-	private GameHandler handler;
-	int contadorGuion;
+	protected GameHandler handler;
+	protected int contadorGuion;
 	private static Logger gameLogger = Logger.getLogger(GameMain.class.getName());
 	
 	static long millis = System.currentTimeMillis();
