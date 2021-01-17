@@ -15,6 +15,10 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.ColorModel;
 import java.io.File;
+import java.sql.DatabaseMetaData;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -24,9 +28,10 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import logica_interna.*;
+import database.DBException;
+import database.DBManager;
 import niveles.Nivel1;
 import niveles.Nivel2;
-
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -48,8 +53,21 @@ public class VentanaPrincipal extends JFrame{
 	JButton botonNivel2;
 	JButton botonPuntuaciones;
 	JButton botonAjustes;
+	
+	public static List<String> partidasJugadas;
+
+	public static DBManager databaseManager;
+	
+	
 	Font fuente = new Font("Serif", Font.BOLD,16);
-	public VentanaPrincipal() {
+	public VentanaPrincipal() throws DBException {
+		
+		databaseManager = new DBManager();
+		databaseManager.open();
+		databaseManager.createNewTable();
+		
+		partidasJugadas = new ArrayList<String>();
+		
 		setIconImage(new ImageIcon("./resources/enemy1.png").getImage());
 		setLayout(new BorderLayout());
 		
@@ -131,16 +149,30 @@ public class VentanaPrincipal extends JFrame{
         
         leadboardTable = new JTable(leadBoardTableModel);
         leadboardTable.setEnabled(false);
+        leadboardTable.setDragEnabled(false);
+        leadboardTable.setColumnSelectionAllowed(false);
         
         leadBoardTableModel.addColumn("PLAYER: ");
         leadBoardTableModel.addColumn("SCORE: ");
         
         leadBoardJScroll = new JScrollPane(leadboardTable);
         botonPuntuaciones.addActionListener(new ActionListener() {
-			
+        	
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				//add(leadboardTable);
+				
+				try {
+					databaseManager.fillLeaderboard();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				/*
+				for(String s: VentanaPrincipal.partidasJugadas) {
+					leadBoardTableModel.addRow(s.split(","));
+				}
+				*/
 				new LeaderboardWindow();
 				
 			}
@@ -230,7 +262,12 @@ public class VentanaPrincipal extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		new VentanaPrincipal();
+		try {
+			new VentanaPrincipal();
+		} catch (DBException e) {
+			System.out.println("ERROR AL ABRIR");
+			e.printStackTrace();
+		}
 	}
 
     public static void setName(PlayerObject player, String name) {

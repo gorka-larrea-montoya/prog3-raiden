@@ -14392,3 +14392,223 @@ ene. 17, 2021 12:10:48 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
 FINE: java.awt.event.WindowEvent[WINDOW_DEACTIVATED,opposite=null,oldState=0,newState=0] on frame0
 ene. 17, 2021 12:10:48 P. M. java.awt.DefaultKeyboardFocusManager dispatchEvent
 FINE: java.awt.event.WindowEvent[WINDOW_CLOSED,opposite=null,oldState=0,newState=0] on frame0
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.properties.version=3
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.frame.captionFont=java.awt.Font[family=Segoe UI,name=Segoe UI,style=plain,size=12]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.frame.captionFont.height=12
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.frame.captionHeight=22
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.frame.captionButtonWidth=36
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.frame.captionButtonHeight=22
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.frame.smallCaptionFont=java.awt.Font[family=Segoe UI,name=Segoe UI,style=plain,size=12]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.frame.smallCaptionFont.height=12
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.frame.smallCaptionHeight=22
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.frame.smallCaptionButtonWidth=22
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.frame.smallCaptionButtonHeight=22
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.frame.sizingBorderWidth=1
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.menu.font=java.awt.Font[family=Segoe UI,name=Segoe UI,style=plain,size=12]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.menu.font.height=12
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.menu.height=19
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.menu.buttonWidth=19
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.scrollbar.width=17
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.scrollbar.height=17
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.status.font=java.awt.Font[family=Segoe UI,name=Segoe UI,style=plain,size=12]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.status.font.height=12
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.tooltip.font=java.awt.Font[family=Segoe UI,name=Segoe UI,style=plain,size=12]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.tooltip.font.height=12
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.messagebox.font=java.awt.Font[family=Segoe UI,name=Segoe UI,style=plain,size=12]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.messagebox.font.height=12
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.icon.hspacing=93
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.icon.vspacing=93
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: win.icon.titleWrappingOn=true
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.icon.font=java.awt.Font[family=Segoe UI,name=Segoe UI,style=plain,size=12]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.icon.font.height=12
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.activeCaptionGradientColor=java.awt.Color[r=185,g=209,b=234]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.inactiveCaptionGradientColor=java.awt.Color[r=215,g=228,b=242]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.item.hotTrackedColor=java.awt.Color[r=0,g=102,b=204]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.3d.darkShadowColor=java.awt.Color[r=105,g=105,b=105]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.3d.backgroundColor=java.awt.Color[r=240,g=240,b=240]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.3d.highlightColor=java.awt.Color[r=255,g=255,b=255]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.3d.lightColor=java.awt.Color[r=227,g=227,b=227]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.3d.shadowColor=java.awt.Color[r=160,g=160,b=160]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.button.textColor=java.awt.Color[r=0,g=0,b=0]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.desktop.backgroundColor=java.awt.Color[r=0,g=0,b=0]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.activeCaptionColor=java.awt.Color[r=153,g=180,b=209]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.activeBorderColor=java.awt.Color[r=180,g=180,b=180]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.color=java.awt.Color[r=100,g=100,b=100]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.backgroundColor=java.awt.Color[r=255,g=255,b=255]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.captionTextColor=java.awt.Color[r=0,g=0,b=0]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.inactiveBorderColor=java.awt.Color[r=244,g=247,b=252]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.inactiveCaptionColor=java.awt.Color[r=191,g=205,b=219]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.inactiveCaptionTextColor=java.awt.Color[r=0,g=0,b=0]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.frame.textColor=java.awt.Color[r=0,g=0,b=0]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.item.highlightColor=java.awt.Color[r=0,g=120,b=215]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.item.highlightTextColor=java.awt.Color[r=255,g=255,b=255]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.mdi.backgroundColor=java.awt.Color[r=171,g=171,b=171]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.menu.backgroundColor=java.awt.Color[r=240,g=240,b=240]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.menu.textColor=java.awt.Color[r=0,g=0,b=0]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.menubar.backgroundColor=java.awt.Color[r=240,g=240,b=240]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.scrollbar.backgroundColor=java.awt.Color[r=200,g=200,b=200]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.text.grayedTextColor=java.awt.Color[r=109,g=109,b=109]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.tooltip.backgroundColor=java.awt.Color[r=255,g=255,b=225]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setColorProperty
+FINE: win.tooltip.textColor=java.awt.Color[r=0,g=0,b=0]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.caret.width=1
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: win.frame.fullWindowDragsOn=true
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: win.text.fontSmoothingOn=true
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.text.fontSmoothingType=2
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.text.fontSmoothingContrast=1200
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.text.fontSmoothingOrientation=1
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.drag.width=4
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: win.drag.height=4
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: DnD.gestureMotionThreshold=2
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: awt.mouse.numButtons=5
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setIntegerProperty
+FINE: awt.multiClickInterval=500
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: awt.dynamicLayoutSupported=true
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: awt.wheelMousePresent=true
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: win.frame.captionGradientsOn=true
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: win.item.hotTrackingOn=true
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: win.menu.keyboardCuesOn=false
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: win.highContrast.on=false
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: awt.file.showHiddenFiles=false
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: awt.file.showAttribCol=false
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.default=WinPlaySound(.Default)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.close=WinPlaySound(Close)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.maximize=WinPlaySound(Maximize)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.minimize=WinPlaySound(Minimize)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.menuCommand=WinPlaySound(MenuCommand)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.menuPopup=WinPlaySound(MenuPopup)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.open=WinPlaySound(Open)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.restoreDown=WinPlaySound(RestoreDown)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.restoreUp=WinPlaySound(RestoreUp)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.asterisk=WinPlaySound(SystemAsterisk)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.exclamation=WinPlaySound(SystemExclamation)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.exit=WinPlaySound(SystemExit)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.hand=WinPlaySound(SystemHand)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.question=WinPlaySound(SystemQuestion)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setSoundProperty
+FINE: win.sound.start=WinPlaySound(SystemStart)
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.ansiFixed.font=java.awt.Font[family=Monospaced,name=Monospaced,style=plain,size=13]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.ansiFixed.font.height=13
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.ansiVar.font=java.awt.Font[family=Microsoft Sans Serif,name=Microsoft Sans Serif,style=plain,size=11]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.ansiVar.font.height=11
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.deviceDefault.font=java.awt.Font[family=Dialog,name=Dialog,style=bold,size=13]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.deviceDefault.font.height=13
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.defaultGUI.font=java.awt.Font[family=Tahoma,name=Tahoma,style=plain,size=11]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.defaultGUI.font.height=11
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.oemFixed.font=java.awt.Font[family=Dialog,name=Dialog,style=plain,size=12]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.oemFixed.font.height=12
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.system.font=java.awt.Font[family=Dialog,name=Dialog,style=bold,size=13]
+ene. 17, 2021 1:17:43 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.system.font.height=13
+ene. 17, 2021 1:17:44 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.systemFixed.font=java.awt.Font[family=Dialog,name=Fixedsys,style=plain,size=12]
+ene. 17, 2021 1:17:44 P. M. sun.awt.windows.WDesktopProperties setFontProperty
+FINE: win.systemFixed.font.height=12
+ene. 17, 2021 1:17:44 P. M. sun.awt.windows.WDesktopProperties setBooleanProperty
+FINE: win.xpstyle.themeActive=true
+ene. 17, 2021 1:17:44 P. M. sun.awt.windows.WDesktopProperties setStringProperty
+FINE: win.xpstyle.dllName=C:\WINDOWS\resources\themes\Aero\Aero.msstyles
+ene. 17, 2021 1:17:44 P. M. sun.awt.windows.WDesktopProperties setStringProperty
+FINE: win.xpstyle.sizeName=NormalSize
+ene. 17, 2021 1:17:44 P. M. sun.awt.windows.WDesktopProperties setStringProperty
+FINE: win.xpstyle.colorName=NormalColor
