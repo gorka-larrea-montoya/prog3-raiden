@@ -54,8 +54,8 @@ public class Bullet extends GameObject{
 			if (handler.objectList.get(i).id == ID.Enemy) {
 				Enemy tempEnemy = (Enemy) handler.objectList.get(i);
 				if(getRectangle().intersects(tempEnemy.getRectangle())){
-					handler.removeobject(this);
-					handler.removeobject(tempEnemy);
+					deleteBullet();
+					tempEnemy.takeDamage();
 				//	p.setKillCount(p.getKillCount() +1);
 					GameMain.setScore(GameMain.getScore() + 5);
 					GameMain.setEnemiesKilledMain(GameMain.getEnemiesKilledMain() +1);
@@ -66,7 +66,9 @@ public class Bullet extends GameObject{
 			
 		}
 	}
-	
+	public void deleteBullet() {
+		handler.removeobject(this);
+	}
 	
 	
 	public void render(Graphics g) {

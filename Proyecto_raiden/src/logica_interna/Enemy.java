@@ -28,7 +28,7 @@ public class Enemy extends GameObject{
 		super(x, y);
 		this.velX = velX;
 		this.velY = velY;
-		this.health = 40;
+		this.health = 1;
 		this.id = ID.Enemy;
 		this.handler = handler;
 		handler.handlerlog(Level.INFO, "Se ha creado un objeto Enemy en X,Y: " + x +","+ y + "con velocidad: "+ velX+","+velY);
@@ -55,6 +55,12 @@ public class Enemy extends GameObject{
 		catch(Exception e){e.printStackTrace();}
 	}	
 	
+public void takeDamage() {
+	health--;
+	if (health == 0) {
+		handler.removeobject(this);
+	}
+}
 
 public void move() {
 
