@@ -155,7 +155,7 @@ Properties prop;
 							labelControlesUp.setText("el boton de arriba es "+KeyEvent.getKeyText(inputUp));
 							labelControlesDown.setText("el boton de abajo es "+KeyEvent.getKeyText(inputDown));
 							labelControlesLeft.setText("el boton de izquierda es " +KeyEvent.getKeyText(inputLeft));
-							labelControlesDown.setText("el boton la derecha es "+KeyEvent.getKeyText(inputRight));
+							labelControlesRight.setText("el boton la derecha es "+KeyEvent.getKeyText(inputRight));
 							labelControlesShoot.setText("el boton de disparar es " +KeyEvent.getKeyText(inputShoot));
 							
 							TextFieldControlesUp = new JTextField("Editar el movimiento hacia arriba");
@@ -163,6 +163,17 @@ Properties prop;
 							TextFieldControlesLeft = new JTextField("Editar el movimiento hacia la izquierda");
 							TextFieldControlesRight = new JTextField("Editar el movimiento hacia la derecha");
 							TextFieldControlesShoot = new JTextField("Editar el boton de disparar");
+							
+							try (OutputStream output = new FileOutputStream("./propiedades/config.properties")){
+								//GUARDA LAS PROPIEDADES
+								prop.store(output, null);
+								System.out.println("culo");
+							} catch (FileNotFoundException e1) {
+								e1.printStackTrace();
+							} catch (Exception e2) {
+								e2.printStackTrace();
+							}
+						
 							
 			}
 		});
@@ -177,18 +188,23 @@ Properties prop;
 				
 				char down =TextFieldControlesDown.getText().charAt(0);
 				inputDown = KeyEvent.getExtendedKeyCodeForChar(down);
-				labelControlesDown.setText("el boton de abajo es "+KeyEvent.getKeyText(inputUp));
+				labelControlesDown.setText("el boton de abajo es "+KeyEvent.getKeyText(inputDown));
 				prop.setProperty("KeyEventDown", Integer.toString(inputDown));
 				
 				char left = TextFieldControlesLeft.getText().charAt(0);
 				inputLeft = KeyEvent.getExtendedKeyCodeForChar(left);
-				labelControlesLeft.setText("el boton de arriba es "+KeyEvent.getKeyText(inputLeft));
+				labelControlesLeft.setText("el boton de la izquierda es "+KeyEvent.getKeyText(inputLeft));
 				prop.setProperty("KeyEventLeft", Integer.toString(inputLeft));
 				
 				char right =TextFieldControlesRight.getText().charAt(0);
 				inputRight = KeyEvent.getExtendedKeyCodeForChar(right);
-				labelControlesRight.setText("el boton de arriba es "+KeyEvent.getKeyText(inputRight));
+				labelControlesRight.setText("el boton la derecha es "+KeyEvent.getKeyText(inputRight));
 				prop.setProperty("KeyEventRight", Integer.toString(inputRight));
+				
+				char shoot =TextFieldControlesShoot.getText().charAt(0);
+				inputShoot = KeyEvent.getExtendedKeyCodeForChar(shoot);
+				labelControlesShoot.setText("el boton de disparar es "+KeyEvent.getKeyText(inputShoot));
+				prop.setProperty("KeyEventShoot", Integer.toString(inputShoot));
 				
 				try (OutputStream output = new FileOutputStream("./propiedades/config.properties")){
 					//GUARDA LAS PROPIEDADES

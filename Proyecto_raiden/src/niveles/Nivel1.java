@@ -27,7 +27,47 @@ public class Nivel1 extends GameMain{
 		
 		
 		
+	}@Override
+	public void generateEnemies() {
+		switch (contadorGuion) {
+		case 60: {
+			System.out.println("aquí habria que meter los bichos");
+			System.out.println("aquí habria que meter los bichos");
+			handler.addObject(new Enemy(250, 0, 0, 6, ID.Enemy, handler) {
+				@Override
+				public void move() {
+					if (velY>0.3) {
+						velY = (float) (velY-0.1);
+					}
+					setX(getVelX()+getX());
+					setY(getVelY()+getY());
+				}
+			});
+			handler.addObject(new Enemy(600, 0, 0, 6, ID.Enemy, handler) {
+				@Override
+				public void move() {
+					if (velY>0.3) {
+						velY = (float) (velY-0.1);
+					}
+					if (velY <= 0.5) {
+						if (getX() <100) {
+							setVelX(3);
+						}else if (getX()>550) {
+							setVelX(-3);
+						}
+					}
+					setX(getVelX()+getX());
+					setY(getVelY()+getY());
+
+				}
+			}
+					);
+		}
+
+		}
 	}
+
+	/*
 	@Override
 	public void generateEnemies() {
 		if (this.contadorGuion == 60) {
@@ -62,7 +102,7 @@ public class Nivel1 extends GameMain{
 			});
 		}
 	}
-	
+	*/
 	public void close() {
 		this.getParent().disable();
 

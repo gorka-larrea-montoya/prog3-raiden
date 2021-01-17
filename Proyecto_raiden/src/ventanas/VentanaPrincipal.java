@@ -207,7 +207,7 @@ public class VentanaPrincipal extends JFrame{
 		botonAjustes.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new VentanaAjustes();		
+				new ventanas.VentanaAjustes();		
 			}
 		});
 		
