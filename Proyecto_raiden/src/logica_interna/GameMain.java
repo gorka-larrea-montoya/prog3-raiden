@@ -93,6 +93,7 @@ public abstract class GameMain extends Canvas implements Runnable{
 		*/
 		getHandler().tick();
 		contadorGuion++;
+		generateEnemies();
 		GameMain.setScore(GameMain.getScore()+ (int) 0.1);
 		
 	}//aqui se pinta la pantalla

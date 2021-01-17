@@ -97,7 +97,7 @@ public class VentanaPrincipal extends JFrame{
 		botonConfirmarNombre.setFont(fuente);
 		botonConfirmarNombre.setBackground(Color.BLACK);
 		//botonConfirmarNombre.setForeground(Color.white);
-		botonConfirmarNombre.setForeground(Color.black);
+		botonConfirmarNombre.setForeground(Color.WHITE);
 		
 		labelNombreResp = new JLabel();
 
@@ -111,7 +111,7 @@ public class VentanaPrincipal extends JFrame{
 		botonNivel1 = new JButton("NIVEL 1");
 		botonNivel1.setBackground(Color.black);
 		//botonNivel1.setForeground(Color.white);
-		botonNivel1.setForeground(Color.black);
+		botonNivel1.setForeground(Color.WHITE);
 		botonNivel1.setFont(fuente);
 		botonNivel1.setSize(20, 60);
 		botonNivel1.addActionListener(new ActionListener() {
@@ -125,7 +125,7 @@ public class VentanaPrincipal extends JFrame{
 		botonNivel2.setSize(20, 60);
 		botonNivel2.setBackground(Color.black);
 		//botonNivel2.setForeground(Color.white);
-		botonNivel1.setForeground(Color.black);
+		botonNivel2.setForeground(Color.WHITE);
 		botonNivel2.setFont(fuente);
 		botonNivel2.addActionListener(new ActionListener() {
 			@Override
@@ -139,7 +139,7 @@ public class VentanaPrincipal extends JFrame{
 		botonPuntuaciones.setSize(20, 60);
 		botonPuntuaciones.setBackground(Color.black);
 		//botonPuntuaciones.setForeground(Color.white);
-		botonPuntuaciones.setForeground(Color.black);
+		botonPuntuaciones.setForeground(Color.WHITE);
 		botonPuntuaciones.setFont(fuente);
 		
 
@@ -201,7 +201,7 @@ public class VentanaPrincipal extends JFrame{
 		botonAjustes = new JButton("AJUSTES");
 		botonAjustes.setBackground(Color.black);
 		//botonAjustes.setForeground(Color.white);
-		botonAjustes.setForeground(Color.black);
+		botonAjustes.setForeground(Color.WHITE);
 		botonAjustes.setFont(fuente);
 		botonAjustes.setSize(20, 60);
 		botonAjustes.addActionListener(new ActionListener() {
