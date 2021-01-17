@@ -36,7 +36,7 @@ public class Bullet extends GameObject{
 	}
 	public void move() {
 		x += velX;
-		y += -6;
+		y += -10;
 	}
 	public void tick() {
 		move();
