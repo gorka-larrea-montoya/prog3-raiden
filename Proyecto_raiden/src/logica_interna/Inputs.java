@@ -1,5 +1,10 @@
 package logica_interna;
 import java.awt.event.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.logging.Level;
 import java.util.prefs.Preferences;
 
 public class Inputs extends KeyAdapter {
@@ -13,11 +18,32 @@ public class Inputs extends KeyAdapter {
 	
 	public Inputs(GameHandler handler) {
 		this.handler = handler;
-		keyEventUp = KeyEvent.VK_W;
-		keyEventLeft = KeyEvent.VK_A;
-		keyEventRight = KeyEvent.VK_D;
-		keyEventDown = KeyEvent.VK_S;
-		keyEventShoot = KeyEvent.VK_SPACE;
+		  try (InputStream input = new FileInputStream("path/to/config.properties")) {
+
+	            Properties prop = new Properties();
+
+	            // load a properties file
+	            prop.load(input);
+
+	            keyEventUp = Integer.parseInt(prop.getProperty("KeyEventUp", Integer.toString(KeyEvent.VK_W)));
+	    		keyEventLeft = Integer.parseInt(prop.getProperty("KeyEventDown", Integer.toString(KeyEvent.VK_S)));
+	    		keyEventRight = Integer.parseInt(prop.getProperty("KeyEventLeft", Integer.toString(KeyEvent.VK_A)));
+	    		keyEventDown = Integer.parseInt(prop.getProperty("KeyEventRight", Integer.toString(KeyEvent.VK_D)));
+	    		keyEventShoot =  Integer.parseInt(prop.getProperty("KeyEventShoot", Integer.toString(KeyEvent.VK_SPACE)));
+
+	        } catch (IOException ex) {
+	        	keyEventUp = KeyEvent.VK_W;
+	    		keyEventLeft = KeyEvent.VK_A;
+	    		keyEventRight = KeyEvent.VK_D;
+	    		keyEventDown = KeyEvent.VK_S;
+	    		keyEventShoot = KeyEvent.VK_SPACE;
+	    		handler.handlerlog(Level.WARNING, "Error al cargar los inputs, volviendo a los controles originales");
+	            ex.printStackTrace();
+	        }
+
+	    
+
+	
 		
 	}
 	public void keyPressed(KeyEvent e) {

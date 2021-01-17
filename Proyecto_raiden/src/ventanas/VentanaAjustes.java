@@ -32,18 +32,18 @@ JLabel labelControlesRight;
 
 JPanel panelShoot;
 JTextField TextFieldControlesShoot;
-JLabel labelControles;
-
-
-JPanel panelbotones;
-JTextField TextFieldGuardar;
-JTextField TextFieldDescartar;
+JLabel labelControlesShoot;
 
 int inputUp;
 int inputRight;
 int inputLeft;
 int inputDown;
 int inputShoot;
+
+JPanel panelbotones;
+JButton buttonRefrescar;
+JButton buttonGuardar;
+JButton buttonSalir;
 	public VentanaAjustes() {
 		try(InputStream input = new FileInputStream("./propiedades/config.properties")){
 			Properties prop = new Properties();
@@ -65,35 +65,8 @@ int inputShoot;
 		setVisible(true);
 		setSize(500,300);
 		setTitle("Opciones");
-		setLayout(new GridLayout(6,1));
+		setLayout(new GridLayout(7,1));
 		TextFieldControlesUp = new JTextField("Editar controles");
-		TextFieldControlesUp.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				addKeyListener(new KeyListener() {
-					@Override
-					public void keyTyped(KeyEvent e) {
-						//e.getKeyCode();
-						System.out.println(e.getKeyCode());
-					}
-
-					@Override
-					public void keyReleased(KeyEvent e) {
-						// TODO Auto-generated method stub						
-					}
-
-					@Override
-					public void keyPressed(KeyEvent e) {
-						// TODO Auto-generated method stub						
-					}
-				}
-						)
-				;
-
-			}
-		}
-				);
 		panelDescripcion = new JPanel();
 		panelDescripcion.add(labelDescripcion = new JLabel("Aqui puedes personalizar tu experiencia"));
 		add(panelDescripcion);
@@ -114,8 +87,9 @@ int inputShoot;
 		TextFieldControlesDown = new JTextField("Editar el movimiento hacia abajo");
 		labelControlesDown = new JLabel("el boton de abajo es "+KeyEvent.getKeyText(inputDown));
 		labelControlesDown.setHorizontalAlignment(SwingConstants.CENTER);
-		panelDown.add(TextFieldControlesDown);
+		
 		panelDown.add(labelControlesDown);
+		panelDown.add(TextFieldControlesDown);
 		add(panelDown);
 		
 		panelRight = new JPanel();
@@ -140,18 +114,36 @@ int inputShoot;
 	
 		add(panelLeft);
 		
-		panelLeft = new JPanel();
-		panelLeft.setLayout(new GridLayout(1,2));
-		TextFieldControlesLeft = new JTextField("Editar el movimiento hacia la izquierda");
-		labelControlesLeft = new JLabel("el boton de izquierda es " +KeyEvent.getKeyText(inputLeft));
-		labelControlesLeft.setHorizontalAlignment(SwingConstants.CENTER);
+		panelShoot = new JPanel();
+		panelShoot.setLayout(new GridLayout(1,2));
+		TextFieldControlesShoot = new JTextField("Editar el boton de disparar");
+		labelControlesShoot = new JLabel("el boton de disparar es " +KeyEvent.getKeyText(inputShoot));
+		labelControlesShoot.setHorizontalAlignment(SwingConstants.CENTER);
 		
-		panelLeft.add(labelControlesLeft);
-		panelLeft.add(TextFieldControlesLeft);
+		panelShoot.add(labelControlesShoot);
+		panelShoot.add(TextFieldControlesShoot);
 	
-		add(panelLeft);
+		add(panelShoot);
+		
+		panelbotones = new JPanel();
+		buttonRefrescar = new JButton("VOLVER A LOS CONTROLES ORIGINALES");
+		buttonGuardar = new JButton("GUARDAR");
+		buttonSalir = new JButton("SALIR");
+		buttonRefrescar.addActionListener(new ActionListener() {
+						@Override
+			public void actionPerformed(ActionEvent e) {
+			
+			}
+		});
 		
 		
+		
+		
+		
+		panelbotones.add(buttonGuardar);
+		panelbotones.add(buttonRefrescar);
+		panelbotones.add(buttonSalir);
+		add(panelbotones);
 	
 	}
 }
