@@ -18,7 +18,7 @@ public class Inputs extends KeyAdapter {
 	
 	public Inputs(GameHandler handler) {
 		this.handler = handler;
-		  try (InputStream input = new FileInputStream("path/to/config.properties")) {
+		  try (InputStream input = new FileInputStream("./propiedades/config.properties")) {
 
 	            Properties prop = new Properties();
 
@@ -26,9 +26,9 @@ public class Inputs extends KeyAdapter {
 	            prop.load(input);
 
 	            keyEventUp = Integer.parseInt(prop.getProperty("KeyEventUp", Integer.toString(KeyEvent.VK_W)));
-	    		keyEventLeft = Integer.parseInt(prop.getProperty("KeyEventDown", Integer.toString(KeyEvent.VK_S)));
-	    		keyEventRight = Integer.parseInt(prop.getProperty("KeyEventLeft", Integer.toString(KeyEvent.VK_A)));
-	    		keyEventDown = Integer.parseInt(prop.getProperty("KeyEventRight", Integer.toString(KeyEvent.VK_D)));
+	    		keyEventDown = Integer.parseInt(prop.getProperty("KeyEventDown", Integer.toString(KeyEvent.VK_S)));
+	    		keyEventLeft = Integer.parseInt(prop.getProperty("KeyEventLeft", Integer.toString(KeyEvent.VK_A)));
+	    		keyEventRight = Integer.parseInt(prop.getProperty("KeyEventRight", Integer.toString(KeyEvent.VK_D)));
 	    		keyEventShoot =  Integer.parseInt(prop.getProperty("KeyEventShoot", Integer.toString(KeyEvent.VK_SPACE)));
 
 	        } catch (IOException ex) {
@@ -74,16 +74,16 @@ public class Inputs extends KeyAdapter {
 		
 		for (int i = 0; i < handler.objectList.size(); i++) {
 			if (handler.objectList.get(i).getId() == ID.Player) {
-				if (key == KeyEvent.VK_W) {
+				if (key == keyEventUp) {
 					handler.setUp(false);
 				}
-				if (key == KeyEvent.VK_A) {
+				if (key == keyEventLeft) {
 					handler.setLeft(false);
 				}
-				if (key == KeyEvent.VK_S) {
+				if (key == keyEventDown) {
 					handler.setDown(false);
 				}
-				if (key == KeyEvent.VK_D) {
+				if (key == keyEventRight) {
 					handler.setRight(false);
 				}
 			}
