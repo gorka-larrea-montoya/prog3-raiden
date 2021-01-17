@@ -11,7 +11,7 @@ import java.util.logging.Level;
 
 import javax.imageio.ImageIO;
 
-import niveles.VentanaPrincipal;
+import ventanas.VentanaPrincipal;
 
 public class Bullet extends GameObject{
 	GameHandler handler;

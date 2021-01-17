@@ -6,7 +6,7 @@ import java.awt.LayoutManager;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import niveles.VentanaPrincipal;
+import ventanas.VentanaPrincipal;
 
 public class LeaderboardWindow extends JFrame{
 	JPanel panel = new JPanel();

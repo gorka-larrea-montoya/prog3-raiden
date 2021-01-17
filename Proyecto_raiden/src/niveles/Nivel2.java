@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 
 import logica_interna.*;
+import ventanas.Ventana;
 
 
 public class Nivel2 extends GameMain {

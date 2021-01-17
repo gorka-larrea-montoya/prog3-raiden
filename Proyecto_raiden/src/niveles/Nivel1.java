@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.util.logging.Level;
 
 import logica_interna.*;
+import ventanas.Ventana;
 
 public class Nivel1 extends GameMain{
 	PlayerObject player;

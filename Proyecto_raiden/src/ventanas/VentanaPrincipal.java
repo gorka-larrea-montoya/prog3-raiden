@@ -1,11 +1,22 @@
-package niveles;
+package ventanas;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.Paint;
+import java.awt.PaintContext;
+import java.awt.Rectangle;
+import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
+import java.awt.image.ColorModel;
+import java.io.File;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -13,6 +24,8 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import logica_interna.*;
+import niveles.Nivel1;
+import niveles.Nivel2;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -35,31 +48,40 @@ public class VentanaPrincipal extends JFrame{
 	JButton botonNivel2;
 	JButton botonPuntuaciones;
 	JButton botonAjustes;
-	
+	Font fuente = new Font("Serif", Font.BOLD,16);
 	public VentanaPrincipal() {
+		setIconImage(new ImageIcon("./resources/enemy1.png").getImage());
 		setLayout(new BorderLayout());
 		
 		setTitle("Raiden_Reborn");
+		setBackground(Color.black);
 		panelBotonesInicio = new JPanel();
 		panelBotonesInicio.setLayout(new GridLayout(1,4));
+		panelBotonesInicio.setBackground(Color.black);
 		
 		panelNombre = new JPanel();
 		panelNombre.setLayout(new FlowLayout());
 		
-		lNombre = new JLabel("Nombre: ");
+		lNombre = new JLabel("NOMBRE: ");
+		lNombre.setForeground(Color.white);
+		lNombre.setOpaque(true);
+		lNombre.setBackground(Color.BLACK);
+		lNombre.setFont(fuente);
 		lNombre.setSize(50, 20);
-		
+		getContentPane().setBackground(Color.black);
 		nombreField = new JTextField("Jugador 1");
+		
 		
 		//nombreField.setSize(200, 300);
 		
-		
-		botonConfirmarNombre = new JButton("Confirmar");
+		panelNombre.setBackground(null);
+		botonConfirmarNombre = new JButton("CONFIRMAR");
+		botonConfirmarNombre.setFont(fuente);
+		botonConfirmarNombre.setBackground(Color.BLACK);
+		botonConfirmarNombre.setForeground(Color.white);
 		
 		labelNombreResp = new JLabel();
-		
 
-		
 		panelNombre.add(lNombre);
 		panelNombre.add(nombreField);
 		panelNombre.add(botonConfirmarNombre);
@@ -67,7 +89,10 @@ public class VentanaPrincipal extends JFrame{
 		
 		
 		
-		botonNivel1 = new JButton("Nivel 1");
+		botonNivel1 = new JButton("NIVEL 1");
+		botonNivel1.setBackground(Color.black);
+		botonNivel1.setForeground(Color.white);
+		botonNivel1.setFont(fuente);
 		botonNivel1.setSize(20, 60);
 		botonNivel1.addActionListener(new ActionListener() {
 			@Override
@@ -76,8 +101,11 @@ public class VentanaPrincipal extends JFrame{
 			}
 		});
 		
-		botonNivel2 = new JButton("Nivel 2");
+		botonNivel2 = new JButton("NIVEL 2");
 		botonNivel2.setSize(20, 60);
+		botonNivel2.setBackground(Color.black);
+		botonNivel2.setForeground(Color.white);
+		botonNivel2.setFont(fuente);
 		botonNivel2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -86,9 +114,11 @@ public class VentanaPrincipal extends JFrame{
 			}
 		});
 		
-		JButton botonPuntuaciones = new JButton("Mejores Puntuaciones");
+		botonPuntuaciones = new JButton("PUNTUACIONES");
 		botonPuntuaciones.setSize(20, 60);
-		
+		botonPuntuaciones.setBackground(Color.black);
+		botonPuntuaciones.setForeground(Color.white);
+		botonPuntuaciones.setFont(fuente);
 		
 
         Class[] clases = {String.class, Integer.class};
@@ -122,9 +152,17 @@ public class VentanaPrincipal extends JFrame{
         
 
 		
-		botonAjustes = new JButton("Ajustes");
-		
+		botonAjustes = new JButton("AJUSTES");
+		botonAjustes.setBackground(Color.black);
+		botonAjustes.setForeground(Color.white);
+		botonAjustes.setFont(fuente);
 		botonAjustes.setSize(20, 60);
+		botonAjustes.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new VentanaAjustes();		
+			}
+		});
 		
 		panelBotonesInicio.add(botonNivel1);
 		panelBotonesInicio.add(botonNivel2);
@@ -172,13 +210,14 @@ public class VentanaPrincipal extends JFrame{
 		
 		});
 		
-		this.add(panelNombre, BorderLayout.CENTER);
+		this.add(panelNombre, BorderLayout.NORTH);
+		this.add(new PaintImage("./resources/Final2.png"), BorderLayout.CENTER);
 		this.add(panelBotonesInicio, BorderLayout.SOUTH);
 		this.setVisible(true);
-		setSize(800,500);
+		setSize(800,550);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		setResizable(true);
-		
+		setResizable(false);
+		setBackground(Color.black);
 		
 	
 		

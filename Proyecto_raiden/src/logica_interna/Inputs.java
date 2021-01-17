@@ -1,5 +1,6 @@
 package logica_interna;
 import java.awt.event.*;
+import java.util.prefs.Preferences;
 
 public class Inputs extends KeyAdapter {
 	GameHandler handler;
@@ -8,7 +9,7 @@ public class Inputs extends KeyAdapter {
 	int keyEventRight;
 	int keyEventDown;
 	int keyEventShoot;
-	
+	private Preferences prefs = Preferences.userRoot().node(this.getClass().getName());
 	
 	public Inputs(GameHandler handler) {
 		this.handler = handler;
@@ -21,9 +22,6 @@ public class Inputs extends KeyAdapter {
 	}
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
-		
-		
-
 		for (int i = 0; i < handler.objectList.size(); i++) {
 			if (handler.objectList.get(i).getId() == ID.Player) {
 				PlayerObject tempPlayer = (PlayerObject) handler.objectList.get(i); 
@@ -42,11 +40,9 @@ public class Inputs extends KeyAdapter {
 				if (key == keyEventRight) {
 					handler.setRight(true);
 				}
-
 			}
 		}
 	}
-
 	public void keyReleased(KeyEvent e) {
 		int key = e.getKeyCode();
 		
@@ -67,5 +63,4 @@ public class Inputs extends KeyAdapter {
 			}
 		}
 	}
-	
 }

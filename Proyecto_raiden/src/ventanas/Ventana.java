@@ -1,4 +1,4 @@
-package niveles;
+package ventanas;
 import java.awt.*;
 import javax.swing.*;
 
@@ -10,6 +10,7 @@ public class Ventana extends JFrame{
 	JLabel textoEjemplo;
 	
 	public Ventana(int alto, int ancho,String titulo,GameMain game) {
+		setIconImage(new ImageIcon("./resources/enemy1.png").getImage());
 		JFrame frame = new JFrame(titulo);
 		Dimension d = new Dimension(alto, ancho);
 		
@@ -26,7 +27,5 @@ public class Ventana extends JFrame{
 		
 		
 	}
-	public static void main(String[] args) {
-	//	new Ventana_Ejemplo(300,200,"pito");
-	}
+
 }
