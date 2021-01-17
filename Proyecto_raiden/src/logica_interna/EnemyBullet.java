@@ -10,10 +10,15 @@ import java.util.logging.Level;
 
 import javax.imageio.ImageIO;
 
+import database.DBException;
+import database.DBManager;
+import niveles.VentanaPrincipal;
+
 public class EnemyBullet extends GameObject{
 	GameHandler handler;
 	Enemy enemy;
 	BufferedImage enemyBulletImage;
+	//DBManager databaseManager;
 
 	public EnemyBullet(float x, float y,GameHandler handler) {
 		super(x, y);
@@ -50,6 +55,14 @@ public class EnemyBullet extends GameObject{
 					if(tempPlayer.getHealth() <= 0) {
 						handler.removeobject(tempPlayer);//muere jugador por herida de bala(hp<0)
 					//	System.out.println(tempPlayer.setHighScore());
+						try {
+							VentanaPrincipal.databaseManager.insertPlayer(tempPlayer);
+						} catch (DBException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						//VentanaPrincipal.partidasJugadas.add(tempPlayer.PartidaToString());
+						
 						System.out.println(tempPlayer.PartidaToString());
 					}
 					//System.out.println("HP: " + tempPlayer.getHealth());

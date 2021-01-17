@@ -1,9 +1,12 @@
 package logica_interna;
-import java.awt.*;
-import java.awt.image.*;
-import java.io.*;
-import java.util.LinkedList;
-import java.util.logging.*;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.image.BufferStrategy;
+import java.io.FileInputStream;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 
 public abstract class GameMain extends Canvas implements Runnable{
@@ -15,8 +18,8 @@ public abstract class GameMain extends Canvas implements Runnable{
 	boolean isRunning = false;
 	Thread gameThread;
 	private Color colortest;
-	private GameHandler handler;
-	int contadorGuion;
+	public GameHandler handler;
+	protected int contadorGuion;
 	private static Logger gameLogger = Logger.getLogger(GameMain.class.getName());
 	
 	static long millis = System.currentTimeMillis();

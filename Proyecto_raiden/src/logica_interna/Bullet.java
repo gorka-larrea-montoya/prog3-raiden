@@ -1,5 +1,4 @@
 package logica_interna;
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -10,8 +9,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 
 import javax.imageio.ImageIO;
-
-import niveles.VentanaPrincipal;
 
 public class Bullet extends GameObject{
 	GameHandler handler;

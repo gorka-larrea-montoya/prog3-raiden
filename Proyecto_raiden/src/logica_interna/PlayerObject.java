@@ -1,18 +1,15 @@
 package logica_interna;
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.sql.Date;
-import java.util.LinkedList;
 import java.util.logging.Level;
 
 import javax.imageio.ImageIO;
+import javax.swing.table.DefaultTableModel;
 public class PlayerObject extends GameObject {
 
 	GameHandler handler;
@@ -32,7 +29,7 @@ public class PlayerObject extends GameObject {
 	public PlayerObject(int x, int y, GameHandler handler, String name,int health, int score, int killCount) {
 		super(x, y);
 		this.handler = handler;
-		this.name = name;
+		this.name = "Jugador 1";
 		this.health = 100;
 		this.speed = (int) 4 ;
 		this.id = ID.Player;
@@ -222,6 +219,8 @@ public class PlayerObject extends GameObject {
 		return (name + "," + (int) GameMain.getScore() + "," + (int) GameMain.getEnemiesKilledMain() + "," + GameMain.getDateString());
 	}
 	
+	
+	Object [] playerToTable = {this.getName(),(int) GameMain.getScore(),(int) GameMain.getEnemiesKilledMain(), GameMain.getDateString()};
 	String s = this.PartidaToString();
 	
 	String[] tablaDatosFila = s.split(",");
@@ -229,7 +228,18 @@ public class PlayerObject extends GameObject {
 	String scoreTable = tablaDatosFila[1];
 	String enemiesKilledTable = tablaDatosFila[2];
 	String dateTable = tablaDatosFila[3];
+
+	Object [] play2Table = tablaDatosFila;
 	
 	PlayerObjectTabla pTabla = new PlayerObjectTabla(nombreTable, scoreTable, enemiesKilledTable, dateTable);
-	
+	/*
+	public Object [] pt2() {
+		Object[] p = tablaDatosFila;
+		return p;
+	}
+	*/
+	public void toTable(DefaultTableModel tm) {
+		
+		tm.addRow(tablaDatosFila);
+	}
 }

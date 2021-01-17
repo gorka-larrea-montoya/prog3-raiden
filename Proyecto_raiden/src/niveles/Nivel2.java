@@ -18,13 +18,13 @@ public class Nivel2 extends GameMain {
 	private String fileName = "SaveData";
 	
 	
-	
 	public Nivel2(String nomString){
 		handler = new GameHandler();
 		this.setColortest(new Color(0, 0, 0));
 		new Ventana(1000, 600, "Nivel 2", this);
 		//this.paint();
 		start();
+		
 		
 		
 		float f = (float) (Math.random() * 1001);

@@ -1,7 +1,5 @@
 package logica_interna;
-import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.LayoutManager;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -14,7 +12,7 @@ public class LeaderboardWindow extends JFrame{
 		
 	
 		setLayout(new FlowLayout());
-		panel.add(VentanaPrincipal.leadboardTable);
+		panel.add(VentanaPrincipal.leadBoardJScroll);
 		this.add(panel);
 		this.setVisible(true);
 		setSize(800,500);

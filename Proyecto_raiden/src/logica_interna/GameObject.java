@@ -1,5 +1,7 @@
 package logica_interna;
-import java.awt.*;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
 
 public abstract class GameObject {
 	protected float x;
