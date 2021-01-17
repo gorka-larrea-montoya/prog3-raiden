@@ -14,6 +14,9 @@ public class Nivel1 extends GameMain{
 	private String fileName = "SaveData";
 
 	public Nivel1(String nomString) {
+		if (nomString == null) {
+			nomString = "Jugador 1";
+		}
 		handler = new GameHandler();
 		this.setColortest(new Color(0, 0, 10));
 		new Ventana(1000, 600, "Nivel 1", this);

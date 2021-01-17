@@ -6,6 +6,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
+import java.util.Random;
 
 import logica_interna.*;
 import ventanas.Ventana;
@@ -20,6 +21,9 @@ public class Nivel2 extends GameMain {
 
 
 	public Nivel2(String nomString){
+		if (nomString == null) {
+			nomString = "Jugador 1";
+		}
 		handler = new GameHandler();
 		this.setColortest(new Color(0, 0, 0));
 		new Ventana(1000, 600, "Nivel 2", this);
@@ -33,19 +37,19 @@ public class Nivel2 extends GameMain {
 		//handler.addObject(new Block(100,0,0,0,ID.Block));
 		//handler.addObject(new Block(200,0,0,0,ID.Block));
 
-
+/*
 		for(float i = 0; i < 20; i++) {
 			getHandler().addObject(new Enemy(i*35 ,-250.0 , 0.2, 1.75, ID.Enemy, getHandler()));
 
 		}
+*/
 
-
-
+/*
 
 		getHandler().addObject(new Enemy(250 ,250 , (int)0.6, (int)0.75, ID.Enemy, getHandler()));
 		getHandler().addObject(new Enemy(310 ,250 , (int)0.6, (int)0.75, ID.Enemy, getHandler()));
 		getHandler().addObject(new Enemy(340 ,250 , (int)0.6, (int)0.75-1, ID.Enemy, getHandler()));
-
+*/
 
 
 
@@ -84,7 +88,142 @@ public class Nivel2 extends GameMain {
 
 		System.out.println(player.toString());
 	}	
-
+	@Override
+	public void generateEnemies() {
+		Random r = new Random();
+		switch (contadorGuion) {
+		case 60*1:
+			handler.addObject(new Enemy(120, 0, r.nextInt(200)/100, r.nextInt(200)/100, ID.Enemy, handler));
+			handler.addObject(new Enemy(512, 0,-1.1, 1.2, ID.Enemy, handler));
+			handler.addObject(new Enemy(250, 0, 0, 6, ID.Enemy, handler) {
+			@Override
+				public void move() {
+					if (velY>0.3) {
+						velY = (float) (velY-0.1);
+					}
+					if (velY <= 0.5) {
+						if (getX() >200) {
+							setVelX(3);
+						}else if (getX()<550) {
+							setVelX(-3);
+						}
+					}
+					setX(getVelX()+getX());
+					setY(getVelY()+getY());
+				}
+			});
+			break;
+		case 60*3:
+			handler.addObject(new Enemy(120, 0, r.nextInt(200)/100, r.nextInt(200)/100, ID.Enemy, handler));
+			handler.addObject(new Enemy(r.nextInt(300)+300, 0,-1.1, 1.2, ID.Enemy, handler));
+			handler.addObject(new Enemy(r.nextInt(600), 0, 0, 6, ID.Enemy, handler) {
+			@Override
+				public void move() {
+					if (velY>0.3) {
+						velY = (float) (velY-0.1);
+					}
+					if (velY <= 0.5) {
+						if (getX() >200) {
+							setVelX(3);
+						}else if (getX()<550) {
+							setVelX(-3);
+						}
+					}
+					setX(getVelX()+getX());
+					setY(getVelY()+getY());
+				}
+			});
+			break;
+		case 60*5:
+			handler.addObject(new Enemy(120, 0, r.nextInt(200)/100, r.nextInt(200)/100, ID.Enemy, handler));
+			handler.addObject(new Enemy(512, 0,-1.1, 1.2, ID.Enemy, handler));
+			handler.addObject(new Enemy(250, 0, 0, 6, ID.Enemy, handler) {
+			@Override
+				public void move() {
+					if (velY>0.3) {
+						velY = (float) (velY-0.1);
+					}
+					if (velY <= 0.5) {
+						if (getX() >200) {
+							setVelX(3);
+						}else if (getX()<550) {
+							setVelX(-3);
+						}
+					}
+					setX(getVelX()+getX());
+					setY(getVelY()+getY());
+				}
+			});
+			break;
+		case 60*7:
+			handler.addObject(new Enemy(120, 0, r.nextInt(200)/100, r.nextInt(200)/100, ID.Enemy, handler));
+			handler.addObject(new Enemy(512, 0,-1.1, 1.2, ID.Enemy, handler));
+			handler.addObject(new Enemy(250, 0, 0, 6, ID.Enemy, handler) {
+			@Override
+				public void move() {
+					if (velY>0.3) {
+						velY = (float) (velY-0.1);
+					}
+					if (velY <= 0.5) {
+						if (getX() >200) {
+							setVelX(3);
+						}else if (getX()<550) {
+							setVelX(-3);
+						}
+					}
+					setX(getVelX()+getX());
+					setY(getVelY()+getY());
+				}
+			});
+			break;
+		case 60*9:
+			handler.addObject(new Enemy(120, 0, r.nextInt(200)/100, r.nextInt(200)/100, ID.Enemy, handler));
+			handler.addObject(new Enemy(512, 0,-1.1, 1.2, ID.Enemy, handler));
+			handler.addObject(new Enemy(250, 0, 0, 6, ID.Enemy, handler) {
+			@Override
+				public void move() {
+					if (velY>0.3) {
+						velY = (float) (velY-0.1);
+					}
+					if (velY <= 0.5) {
+						if (getX() >200) {
+							setVelX(3);
+						}else if (getX()<550) {
+							setVelX(-3);
+						}
+					}
+					setX(getVelX()+getX());
+					setY(getVelY()+getY());
+				}
+			});
+			break;
+		case 60*11:
+			handler.addObject(new Enemy(120, 0, r.nextInt(200)/100, r.nextInt(200)/100, ID.Enemy, handler));
+			handler.addObject(new Enemy(512, 0,-1.1, 1.2, ID.Enemy, handler));
+			handler.addObject(new Enemy(250, 0, 0, 6, ID.Enemy, handler) {
+			@Override
+				public void move() {
+					if (velY>0.3) {
+						velY = (float) (velY-0.1);
+					}
+					if (velY <= 0.5) {
+						if (getX() >200) {
+							setVelX(3);
+						}else if (getX()<550) {
+							setVelX(-3);
+						}
+					}
+					setX(getVelX()+getX());
+					setY(getVelY()+getY());
+				}
+			});
+			contadorGuion=0;
+			break;
+			
+		}
+	}
+	
+	
 	private void createSaveData() {
 		try {
 			File file = new File(saveDataPath, fileName);
