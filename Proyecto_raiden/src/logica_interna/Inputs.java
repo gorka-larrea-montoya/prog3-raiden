@@ -1,6 +1,9 @@
 package logica_interna;
 import java.awt.event.*;
-import java.util.prefs.Preferences;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.logging.Level;
 
 public class Inputs extends KeyAdapter {
 	GameHandler handler;
@@ -9,15 +12,27 @@ public class Inputs extends KeyAdapter {
 	int keyEventRight;
 	int keyEventDown;
 	int keyEventShoot;
-	private Preferences prefs = Preferences.userRoot().node(this.getClass().getName());
+	
 	
 	public Inputs(GameHandler handler) {
+		try(InputStream input = new FileInputStream("./propiedades/config.properties")){
+			Properties prop = new Properties();
+		prop.load(input);
+		
+		keyEventUp = Integer.parseInt(prop.getProperty("KeyEventUp", Integer.toString(KeyEvent.VK_W)));
+		keyEventLeft =  Integer.parseInt(prop.getProperty("KeyEventLeft", Integer.toString(KeyEvent.VK_A)));
+		keyEventRight =  Integer.parseInt(prop.getProperty("KeyEventRight", Integer.toString(KeyEvent.VK_D)));
+		keyEventDown =  Integer.parseInt(prop.getProperty("KeyEventDown", Integer.toString(KeyEvent.VK_S)));
+		keyEventShoot =  Integer.parseInt(prop.getProperty("KeyEventShoot", Integer.toString(KeyEvent.VK_SPACE)));
+		}catch (Exception e) {
+			handler.handlerlog(Level.WARNING, "Ha habido un error al cargar los Inputs, se han retornado a su configuración original(WASD)");
+			keyEventUp = KeyEvent.VK_W;
+			keyEventLeft = KeyEvent.VK_A;
+			keyEventRight = KeyEvent.VK_D;
+			keyEventDown = KeyEvent.VK_S;
+			keyEventShoot = KeyEvent.VK_SPACE;
+		}
 		this.handler = handler;
-		keyEventUp = KeyEvent.VK_W;
-		keyEventLeft = KeyEvent.VK_A;
-		keyEventRight = KeyEvent.VK_D;
-		keyEventDown = KeyEvent.VK_S;
-		keyEventShoot = KeyEvent.VK_SPACE;
 		
 	}
 	public void keyPressed(KeyEvent e) {

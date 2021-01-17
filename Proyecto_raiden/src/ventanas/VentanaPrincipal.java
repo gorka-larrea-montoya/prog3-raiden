@@ -41,7 +41,7 @@ public class VentanaPrincipal extends JFrame{
 	protected static final GameHandler handler = null;
 	public static JTable leadboardTable;
 	DefaultTableModel leadBoardTableModel;
-	JScrollPane leadBoardJScroll;
+	private static JScrollPane leadBoardJScroll;
 	String nombreDelJugador;
 	JPanel panelBotonesInicio;
 	JPanel panelNombre;
@@ -155,7 +155,7 @@ public class VentanaPrincipal extends JFrame{
         leadBoardTableModel.addColumn("PLAYER: ");
         leadBoardTableModel.addColumn("SCORE: ");
         
-        leadBoardJScroll = new JScrollPane(leadboardTable);
+        setLeadBoardJScroll(new JScrollPane(leadboardTable));
         botonPuntuaciones.addActionListener(new ActionListener() {
         	
 			@Override
@@ -273,4 +273,14 @@ public class VentanaPrincipal extends JFrame{
     public static void setName(PlayerObject player, String name) {
     	player.setName(name);;
     }
+
+
+	public static JScrollPane getLeadBoardJScroll() {
+		return leadBoardJScroll;
+	}
+
+
+	public void setLeadBoardJScroll(JScrollPane leadBoardJScroll) {
+		this.leadBoardJScroll = leadBoardJScroll;
+	}
 }	//comentario..prueba
